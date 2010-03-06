@@ -207,10 +207,13 @@ void MainWindow::setup_toolbar_buttons(int index)
         toolBarEmpty->show();
         break;
     /* used tab count +1 for comm terminal buttons */
-    default:
+    case 4:
         this->addToolBar(toolBarComm);
         toolBarComm->show();
         break;
+    default:
+        break;
+
     }
     /* add permanent toolbars */
 
@@ -304,6 +307,8 @@ void MainWindow::on_modeBox_activated(int index)
 
     if (index == 1)
         setup_toolbar_buttons(ui->tabWidget->count() + index);
+    else
+        setup_toolbar_buttons(ui->tabWidget->count() +2);
 }
 
 void MainWindow::right_click(const QPoint &p)
