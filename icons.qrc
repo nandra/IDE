@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/new/prefix1" >
+        <file>images/Continue.png</file>
+        <file>images/debugger_breakpoints.png</file>
+        <file>images/debugger_start_small.png</file>
+        <file>images/delete.png</file>
+        <file>images/filenew.png</file>
+        <file>images/fileopen.png</file>
+        <file>images/filesave.png</file>
+        <file>images/mode_Debug.png</file>
+        <file>images/newitem.png</file>
+        <file>images/reset.png</file>
+    </qresource>
+</RCC>
