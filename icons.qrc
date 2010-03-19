@@ -10,5 +10,6 @@
         <file>images/mode_Debug.png</file>
         <file>images/newitem.png</file>
         <file>images/reset.png</file>
+        <file>images/header_en.png</file>
     </qresource>
 </RCC>
