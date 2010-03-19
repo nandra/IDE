@@ -12,4 +12,13 @@
         <file>images/reset.png</file>
         <file>images/header_en.png</file>
     </qresource>
+    <qresource prefix="/new/prefix2" >
+        <file>images/app/001_06.png</file>
+        <file>images/app/001_18.png</file>
+        <file>images/app/001_20.png</file>
+        <file>images/app/001_45.png</file>
+        <file>images/app/001_46.png</file>
+        <file>images/app/001_50.png</file>
+        <file>images/app/001_51.png</file>
+    </qresource>
 </RCC>

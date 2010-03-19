@@ -28,6 +28,17 @@ private:
     upload_form *up_form;
     test_form *tst_form;
     debug_form *dbg_form;
+
+private slots:
+
+
+private slots:
+    void on_toolButton_6_released();
+    void on_toolButton_2_released();
+    void on_toolButton_3_released();
+    void on_toolButton_4_released();
+    void on_toolButton_5_released();
+    void on_toolButton_released();
 };
 
 #endif // MAINWINDOW_H
