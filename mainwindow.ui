@@ -44,7 +44,7 @@
       <x>0</x>
       <y>0</y>
       <width>71</width>
-      <height>316</height>
+      <height>350</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -195,7 +195,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -245,25 +245,6 @@
    <addaction name="menuBuild"/>
    <addaction name="menuProgram"/>
    <addaction name="menuHelp"/>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionNew"/>
-   <addaction name="actionOpen"/>
-   <addaction name="actionSave"/>
-   <addaction name="separator"/>
-   <addaction name="actionBuild_project"/>
-   <addaction name="actionClea_nproject"/>
-   <addaction name="separator"/>
-   <addaction name="actionProg_mode"/>
-   <addaction name="actionUpload"/>
-   <addaction name="actionDebug"/>
-   <addaction name="actionModule_reset"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew">
