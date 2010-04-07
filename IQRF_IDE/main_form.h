@@ -24,10 +24,15 @@ private:
     dialog_usb_device_info *usb_dev_info;
     dialog_about *about;
     dialog_tolls_settings *settings;
+    void settings_read(void);
+    void settings_write(void);
 public slots:
     void open_usb_info_dialog(void);
     void open_about_dialog(void);
     void open_tool_settings_dialog(void);
+    void open_home_url(void);
+    void open_support_url(void);
+
 };
 
 #endif // MAIN_FORM_H

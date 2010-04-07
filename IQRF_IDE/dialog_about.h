@@ -18,6 +18,9 @@ protected:
 
 private:
     Ui::dialog_about *m_ui;
+
+private slots:
+    void on_pushButton_released();
 };
 
 #endif // DIALOG_ABOUT_H

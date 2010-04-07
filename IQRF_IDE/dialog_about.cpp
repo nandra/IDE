@@ -6,7 +6,6 @@ dialog_about::dialog_about(QWidget *parent) :
     m_ui(new Ui::dialog_about)
 {
     m_ui->setupUi(this);
-    m_ui->label->setText("<h2>IQRF IDE</h2>");
 }
 
 dialog_about::~dialog_about()
@@ -24,4 +23,9 @@ void dialog_about::changeEvent(QEvent *e)
     default:
         break;
     }
+}
+
+void dialog_about::on_pushButton_released()
+{
+    this->setShown(false);
 }
