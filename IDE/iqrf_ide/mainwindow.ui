@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpenTemplate"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="actionSave_All"/>
+    <addaction name="actionLoad_hex_iqrf"/>
+    <addaction name="separator"/>
+    <addaction name="actionImport_Macros"/>
+    <addaction name="actionExport_Macros"/>
+    <addaction name="actionClear_All_Macros"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Workspace"/>
+    <addaction name="actionSave_Workspace"/>
+    <addaction name="actionSave_Workspace_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecent_Files"/>
+    <addaction name="actionRecent_Workspaces"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuSetings">
+    <property name="title">
+     <string>Setings</string>
+    </property>
+    <addaction name="actionCheck_for_IQRF_IDE_updates"/>
+    <addaction name="actionCheck_for_IQRF_News"/>
+    <addaction name="actionBeep_on_upload"/>
+    <addaction name="actionBeep_on_debug"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionCompiler"/>
+    <addaction name="actionEditor"/>
+    <addaction name="actionMiscellaneous"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionIQRF_Home_page"/>
+    <addaction name="actionIQRF_Support"/>
+    <addaction name="actionShow_IQRF_USB_Device_info"/>
+    <addaction name="actionAbout_2"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetings"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+  </action>
+  <action name="actionOpenTemplate">
+   <property name="text">
+    <string>OpenTemplate</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionSave_All">
+   <property name="text">
+    <string>Save All</string>
+   </property>
+  </action>
+  <action name="actionLoad_hex_iqrf">
+   <property name="text">
+    <string>Load (.hex .iqrf)</string>
+   </property>
+  </action>
+  <action name="actionImport_Macros">
+   <property name="text">
+    <string>Import Macros..</string>
+   </property>
+  </action>
+  <action name="actionExport_Macros">
+   <property name="text">
+    <string>Export Macros...</string>
+   </property>
+  </action>
+  <action name="actionClear_All_Macros">
+   <property name="text">
+    <string>Clear All Macros</string>
+   </property>
+  </action>
+  <action name="actionOpen_Workspace">
+   <property name="text">
+    <string>Open Workspace...</string>
+   </property>
+  </action>
+  <action name="actionSave_Workspace">
+   <property name="text">
+    <string>Save Workspace</string>
+   </property>
+  </action>
+  <action name="actionSave_Workspace_As">
+   <property name="text">
+    <string>Save Workspace as...</string>
+   </property>
+  </action>
+  <action name="actionRecent_Files">
+   <property name="text">
+    <string>Recent Files</string>
+   </property>
+  </action>
+  <action name="actionRecent_Workspaces">
+   <property name="text">
+    <string>Recent Workspaces</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_IQRF_IDE_updates">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Check for IQRF IDE updates</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_IQRF_News">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Check for IQRF News</string>
+   </property>
+  </action>
+  <action name="actionBeep_on_upload">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Beep on Upload</string>
+   </property>
+  </action>
+  <action name="actionBeep_on_debug">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Beep on Debug</string>
+   </property>
+  </action>
+  <action name="actionCompiler">
+   <property name="text">
+    <string>Compiler</string>
+   </property>
+  </action>
+  <action name="actionEditor">
+   <property name="text">
+    <string>Editor</string>
+   </property>
+  </action>
+  <action name="actionMiscellaneous">
+   <property name="text">
+    <string>Miscellaneous</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionIQRF_Home_page">
+   <property name="text">
+    <string>IQRF Home Page</string>
+   </property>
+  </action>
+  <action name="actionIQRF_Support">
+   <property name="text">
+    <string>IQRF Support</string>
+   </property>
+  </action>
+  <action name="actionShow_IQRF_USB_Device_info">
+   <property name="text">
+    <string>Show IQRF USB Device info</string>
+   </property>
+  </action>
+  <action name="actionAbout_2">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
