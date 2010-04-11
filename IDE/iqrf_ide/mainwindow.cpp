@@ -24,6 +24,17 @@ MainWindow::MainWindow(QWidget *parent)
     }
     QApplication::installTranslator(translator);
 
+    /*ui->statusBar->addWidget(ui->colorStatusLbl);
+    ui->statusBar->addWidget(ui->statusLbl);
+    ui->statusBar->addWidget(ui->moduleTypeLbl);
+    ui->statusBar->addWidget(ui->osLbl);
+    ui->statusBar->addWidget(ui->idLbl);
+    ui->statusBar->addWidget(ui->loadProgressBar);
+
+    ui->statusBar->addPermanentWidget(ui->checkModeBox);*/
+    //ui->statusBar->addWidget(ui->widget);
+    //ui->frame-
+
     this->about = new DialogAbout(parent);
     this->compiler = new DialogCompiler(parent);
     this->dialogEditor = new DialogEditor(parent);
