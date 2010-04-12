@@ -36,7 +36,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->uploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->rfUploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->cleaAllDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->add00Btn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->getDataBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
@@ -67,7 +70,6 @@ void MainWindow::setup_toolbar_buttons(int index)
     switch (index) {
     /* programming */
     case 0:
-    default:
         ui->continueDebugBtn->setVisible(false);
         ui->cleaAllDebugBtn->setVisible(false);
         ui->skipAllDebugBox->setVisible(false);
@@ -76,15 +78,23 @@ void MainWindow::setup_toolbar_buttons(int index)
         ui->uploadBtn->setDisabled(true);
         ui->rfUploadBtn->setVisible(true);
         ui->rfUploadBtn->setDisabled(true);
+        ui->crcmBtn->setVisible(false);
+        ui->add00Btn->setVisible(false);
+        ui->getDataBtn->setVisible(false);
+        ui->spiCheckBtn->setVisible(false);
         break;
     /* debugging */
     case 1:
         ui->continueDebugBtn->setVisible(true);
         ui->cleaAllDebugBtn->setVisible(true);
         ui->skipAllDebugBox->setVisible(true);
-         ui->compileBtn->setVisible(false);
+        ui->compileBtn->setVisible(false);
         ui->uploadBtn->setVisible(false);
         ui->rfUploadBtn->setVisible(false);
+        ui->crcmBtn->setVisible(false);
+        ui->add00Btn->setVisible(false);
+        ui->getDataBtn->setVisible(false);
+        ui->spiCheckBtn->setVisible(false);
         break;
     case 2:
         ui->continueDebugBtn->setVisible(false);
@@ -93,7 +103,24 @@ void MainWindow::setup_toolbar_buttons(int index)
         ui->uploadBtn->setVisible(false);
         ui->rfUploadBtn->setVisible(false);
         ui->compileBtn->setVisible(false);
+        /* raw mode */
+        if (ui->modeBox->currentIndex() == 1) {
+            ui->crcmBtn->setVisible(true);
+            ui->add00Btn->setVisible(true);
+            ui->getDataBtn->setVisible(true);
+            ui->spiCheckBtn->setVisible(true);
+        } else {
+            ui->crcmBtn->setVisible(false);
+            ui->add00Btn->setVisible(false);
+            ui->getDataBtn->setVisible(false);
+            ui->spiCheckBtn->setVisible(false);
+        }
         break;
+     default:
+        ui->crcmBtn->setVisible(true);
+        ui->add00Btn->setVisible(true);
+        ui->getDataBtn->setVisible(true);
+        ui->spiCheckBtn->setVisible(true);
     }
 }
 
@@ -183,4 +210,15 @@ void MainWindow::lang_change(void)
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
     setup_toolbar_buttons(index);
+}
+
+void MainWindow::on_modeBox_activated(int index)
+{
+    /* because toolbar buttons could be changed by
+     * tab or by listBox simultaneously we use index + 1
+     * to show raw terminal buttons in toolbar
+     */
+
+    if (index == 1)
+        setup_toolbar_buttons(ui->tabWidget->count() + index);
 }

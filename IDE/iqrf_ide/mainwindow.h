@@ -32,6 +32,7 @@ private:
     QTranslator *translator;
     int language;
 private slots:
+    void on_modeBox_activated(int index);
     void on_tabWidget_currentChanged(int index);
     void on_actionExit_triggered();
     void on_actionMiscellaneous_triggered();
