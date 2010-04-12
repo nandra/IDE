@@ -38,9 +38,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->cleaAllDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
 
-    /* setup tab widgets */
-    //this->programming = new FormProgramming(parent);
-    //ui->tabWidget->insertTab(0, programming,tr("Programming"));
+    /* setup tab widgets buttons */
+    setup_toolbar_buttons(ui->tabWidget->currentIndex());
+
 
 
     this->about = new DialogAbout(parent);
@@ -60,6 +60,41 @@ void MainWindow::changeEvent(QEvent *event)
 {
     if (event->type() == QEvent::LanguageChange)
         ui->retranslateUi(this);
+}
+
+void MainWindow::setup_toolbar_buttons(int index)
+{
+    switch (index) {
+    /* programming */
+    case 0:
+    default:
+        ui->continueDebugBtn->setVisible(false);
+        ui->cleaAllDebugBtn->setVisible(false);
+        ui->skipAllDebugBox->setVisible(false);
+        ui->compileBtn->setVisible(true);
+        ui->uploadBtn->setVisible(true);
+        ui->uploadBtn->setDisabled(true);
+        ui->rfUploadBtn->setVisible(true);
+        ui->rfUploadBtn->setDisabled(true);
+        break;
+    /* debugging */
+    case 1:
+        ui->continueDebugBtn->setVisible(true);
+        ui->cleaAllDebugBtn->setVisible(true);
+        ui->skipAllDebugBox->setVisible(true);
+         ui->compileBtn->setVisible(false);
+        ui->uploadBtn->setVisible(false);
+        ui->rfUploadBtn->setVisible(false);
+        break;
+    case 2:
+        ui->continueDebugBtn->setVisible(false);
+        ui->cleaAllDebugBtn->setVisible(false);
+        ui->skipAllDebugBox->setVisible(false);
+        ui->uploadBtn->setVisible(false);
+        ui->rfUploadBtn->setVisible(false);
+        ui->compileBtn->setVisible(false);
+        break;
+    }
 }
 
 
@@ -143,4 +178,9 @@ void MainWindow::lang_change(void)
         }
         QApplication::installTranslator(translator);
     }
+}
+
+void MainWindow::on_tabWidget_currentChanged(int index)
+{
+    setup_toolbar_buttons(index);
 }

@@ -22,7 +22,7 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void changeEvent(QEvent *event);
-
+    void setup_toolbar_buttons(int index);
 private:
     Ui::MainWindow *ui;
     DialogAbout *about;
@@ -32,6 +32,7 @@ private:
     QTranslator *translator;
     int language;
 private slots:
+    void on_tabWidget_currentChanged(int index);
     void on_actionExit_triggered();
     void on_actionMiscellaneous_triggered();
     void on_actionEditor_triggered();
