@@ -5,10 +5,13 @@
 #include <QUrl>
 #include <QSettings>
 #include <QDebug>
+#include <QStyle>
+#include <QPushButton>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
     this->translator = new QTranslator(parent);
@@ -21,19 +24,24 @@ MainWindow::MainWindow(QWidget *parent)
     case 0:
     default:
         qDebug() << "Loading en lang file:" << translator->load(":/new/lang/lang_en.qm");
+        break;
     }
     QApplication::installTranslator(translator);
 
-    /*ui->statusBar->addWidget(ui->colorStatusLbl);
-    ui->statusBar->addWidget(ui->statusLbl);
-    ui->statusBar->addWidget(ui->moduleTypeLbl);
-    ui->statusBar->addWidget(ui->osLbl);
-    ui->statusBar->addWidget(ui->idLbl);
-    ui->statusBar->addWidget(ui->loadProgressBar);
+    /* style setup for mainwindow */
+    ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->compileBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->uploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->rfUploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->cleaAllDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
 
-    ui->statusBar->addPermanentWidget(ui->checkModeBox);*/
-    //ui->statusBar->addWidget(ui->widget);
-    //ui->frame-
+    /* setup tab widgets */
+    //this->programming = new FormProgramming(parent);
+    //ui->tabWidget->insertTab(0, programming,tr("Programming"));
+
 
     this->about = new DialogAbout(parent);
     this->compiler = new DialogCompiler(parent);

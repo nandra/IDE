@@ -7,6 +7,7 @@
 #include "dialog_editor.h"
 #include "dialog_misc.h"
 #include <QTranslator>
+#include "style.h"
 
 namespace Ui
 {

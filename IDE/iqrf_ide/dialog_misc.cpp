@@ -24,6 +24,10 @@ void DialogMisc::changeEvent(QEvent *e)
     switch (e->type()) {
     case QEvent::LanguageChange:
         m_ui->retranslateUi(this);
+        /* translation cause listbox to set to default
+         * just re-read value again
+         */
+        settings_read();
         break;
     default:
         break;

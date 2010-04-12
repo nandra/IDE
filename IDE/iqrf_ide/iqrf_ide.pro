@@ -13,7 +13,8 @@ HEADERS += mainwindow.h \
     dialog_about.h \
     dialog_compiler.h \
     dialog_editor.h \
-    dialog_misc.h
+    dialog_misc.h \
+    style.h
 FORMS += mainwindow.ui \
     dialog_about.ui \
     dialog_compiler.ui \
