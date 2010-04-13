@@ -38,10 +38,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->uploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->rfUploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    /*ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->add00Btn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->getDataBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);*/
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
@@ -80,10 +80,10 @@ void MainWindow::setup_toolbar_buttons(int index)
         ui->uploadBtn->setDisabled(true);
         ui->rfUploadBtn->setVisible(true);
         ui->rfUploadBtn->setDisabled(true);
-        ui->crcmBtn->setVisible(false);
+        /*ui->crcmBtn->setVisible(false);
         ui->add00Btn->setVisible(false);
         ui->getDataBtn->setVisible(false);
-        ui->spiCheckBtn->setVisible(false);
+        ui->spiCheckBtn->setVisible(false);*/
         break;
     /* debugging */
     case 1:
@@ -93,10 +93,10 @@ void MainWindow::setup_toolbar_buttons(int index)
         ui->compileBtn->setVisible(false);
         ui->uploadBtn->setVisible(false);
         ui->rfUploadBtn->setVisible(false);
-        ui->crcmBtn->setVisible(false);
+        /*ui->crcmBtn->setVisible(false);
         ui->add00Btn->setVisible(false);
         ui->getDataBtn->setVisible(false);
-        ui->spiCheckBtn->setVisible(false);
+        ui->spiCheckBtn->setVisible(false);*/
         break;
     case 2:
         ui->continueDebugBtn->setVisible(false);
@@ -106,7 +106,7 @@ void MainWindow::setup_toolbar_buttons(int index)
         ui->rfUploadBtn->setVisible(false);
         ui->compileBtn->setVisible(false);
         /* raw mode */
-        if (ui->modeBox->currentIndex() == 1) {
+        /*if (ui->modeBox->currentIndex() == 1) {
             ui->crcmBtn->setVisible(true);
             ui->add00Btn->setVisible(true);
             ui->getDataBtn->setVisible(true);
@@ -116,13 +116,14 @@ void MainWindow::setup_toolbar_buttons(int index)
             ui->add00Btn->setVisible(false);
             ui->getDataBtn->setVisible(false);
             ui->spiCheckBtn->setVisible(false);
-        }
+        }*/
         break;
      default:
-        ui->crcmBtn->setVisible(true);
+        /*ui->crcmBtn->setVisible(true);
         ui->add00Btn->setVisible(true);
         ui->getDataBtn->setVisible(true);
-        ui->spiCheckBtn->setVisible(true);
+        ui->spiCheckBtn->setVisible(true);*/
+        break;
     }
 }
 
