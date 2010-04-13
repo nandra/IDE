@@ -30,7 +30,7 @@ private:
     DialogEditor *dialogEditor;
     DialogMisc *misc;
     QTranslator *translator;
-    int language;
+
 private slots:
     void on_modeBox_activated(int index);
     void on_tabWidget_currentChanged(int index);
@@ -42,7 +42,6 @@ private slots:
     void on_actionIQRF_Home_page_triggered();
     void on_actionAbout_2_triggered();
     void on_actionShow_IQRF_USB_Device_info_triggered();
-    void lang_changed(int index);
     void lang_change(void);
 };
 

@@ -84,9 +84,3 @@ void DialogMisc::on_templateBtn_released()
     m_ui->userWorkspaceLineEdit->setText( QFileDialog::getOpenFileName(this, tr("Template"), "",
                                             tr("Template file (*.tpl)")));
 }
-
-void DialogMisc::on_languageBox_currentIndexChanged(int index)
-{
-    emit valueChanged(index);
-}
-

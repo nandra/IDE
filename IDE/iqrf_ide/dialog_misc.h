@@ -26,12 +26,11 @@ private:
 
 private slots:
 
-    void on_languageBox_currentIndexChanged(int index);
     void on_templateBtn_released();
     void on_selectWorkspaceBtn_released();
     void on_buttonBox_clicked(QAbstractButton* button);
- signals:
-    void valueChanged(int index);
+
+
 };
 
 #endif // DialogMisc_H

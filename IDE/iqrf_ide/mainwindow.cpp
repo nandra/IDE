@@ -50,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->compiler = new DialogCompiler(parent);
     this->dialogEditor = new DialogEditor(parent);
     this->misc = new DialogMisc(parent);
-    connect(misc, SIGNAL(valueChanged(int)), this,SLOT(lang_changed(int)));
+
     connect(misc, SIGNAL(finished(int)), this,SLOT(lang_change()));
 }
 
@@ -174,37 +174,22 @@ void MainWindow::on_actionExit_triggered()
     this->close();
 }
 
-/*
- * Setting of language is little bit tricky
- * when language is changed then signal is
- * emitted from misc dialog. value is remembered
- * and when dialog is closed then language is changed
- * otherwise it makes some troubles (circular dependency)
-*/
-void MainWindow::lang_changed(int index)
-{
-    this->language = index;
-}
 
 void MainWindow::lang_change(void)
 {
 
     QSettings settings("Microrisc", "misc");
 
-    int old_value = settings.value("setup/lang").toInt();
-
-    if (old_value != this->language + 1) {
-
-        switch (this->language) {
+    switch (settings.value("setup/lang").toInt()) {
         case 1:
             translator->load(":/new/lang/lang_cz.qm");
             break;
         case 0:
         default:
             translator->load(":/new/lang/lang_en.qm");
-        }
-        QApplication::installTranslator(translator);
     }
+    QApplication::installTranslator(translator);
+
 }
 
 void MainWindow::on_tabWidget_currentChanged(int index)
