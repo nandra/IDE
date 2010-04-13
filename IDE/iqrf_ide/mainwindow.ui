@@ -6,572 +6,666 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>678</width>
-    <height>592</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>IQRF IDE v3.00d</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>4</x>
-      <y>55</y>
-      <width>670</width>
-      <height>460</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="prog">
-     <attribute name="title">
-      <string>Programming</string>
-     </attribute>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="geometry">
-       <rect>
-        <x>4</x>
-        <y>202</y>
-        <width>672</width>
-        <height>75</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Module info</string>
-      </property>
-      <layout class="QFormLayout" name="formLayout_3">
-       <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="1">
-          <widget class="QLabel" name="coordinatorLbl">
-           <property name="text">
-            <string>Coordinator</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QLabel" name="idprogLbl">
-           <property name="text">
-            <string>ID: 1000589</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="6">
-          <widget class="QLabel" name="osVerLblb">
-           <property name="text">
-            <string>IQRF OS v2.11 (0878)</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="8">
-          <widget class="QLabel" name="mcuLbl">
-           <property name="text">
-            <string>MCU PIC 16F886</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="7">
-          <spacer name="horizontalSpacer_7">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="5">
-          <spacer name="horizontalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="9">
-          <widget class="QToolButton" name="copyModuleInfoBtn">
-           <property name="text">
-            <string>C</string>
-           </property>
-          </widget>
-         </item>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="styleSheet">
+         <string>background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(102, 153, 220, 255), stop:1 rgba(255, 255, 255, 255));</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
          <item row="0" column="0">
-          <widget class="QPushButton" name="remodModuleInfoBtn">
-           <property name="text">
-            <string>Read</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="">
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QPushButton" name="openCFileBtn">
+            <widget class="QPushButton" name="checkUSBBtn">
              <property name="text">
-              <string>Open (*.c)</string>
+              <string>Check USB Device</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
            <item>
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QLabel" name="openFilePathLbl">
+            <widget class="QPushButton" name="editBtn">
              <property name="text">
-              <string>C:...This is very long path to the C FileE01-TX.c</string>
+              <string>Edit</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
            <item>
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QLabel" name="openCFileDateTimeLbl">
+            <widget class="QPushButton" name="resetBtn">
              <property name="text">
-              <string>22.6.2010 18:27</string>
+              <string>Reset TR module</string>
              </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>Select TR Module</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="trModuleBox">
-             <item>
-              <property name="text">
-               <string>TR-11A</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TR-21A</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TR-31B</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TR-32B</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TR-52B</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TR-53B</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>4</x>
-        <y>69</y>
-        <width>759</width>
-        <height>129</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QPushButton" name="loadHexIqrfBtn">
-           <property name="text">
-            <string>Load (.hex, .iqrf)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="removeBtn">
-           <property name="text">
-            <string>Remove</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="1">
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="1" column="0">
-          <widget class="QRadioButton" name="radioButton0">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="checkBox0">
-           <property name="text">
-            <string>This is very long text for new opened file</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QLabel" name="label0">
-           <property name="text">
-            <string>22.10.2010 18:33</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QCheckBox" name="checkBox00">
-           <property name="text">
-            <string>28</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QCheckBox" name="checkBox01">
-           <property name="text">
-            <string>32</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>Flash [instr]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>EEPROM [bytes]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QRadioButton" name="radioButton1">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QCheckBox" name="checkBox1">
-           <property name="text">
-            <string>This is very long text for new opened file</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="label1">
-           <property name="text">
-            <string>22.10.2010 18:33</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QCheckBox" name="checkBox11">
-           <property name="text">
-            <string>28</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="4">
-          <widget class="QCheckBox" name="checkBox12">
-           <property name="text">
-            <string>32</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QRadioButton" name="radioButton2">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QCheckBox" name="checkBox2">
-           <property name="text">
-            <string>This is very long text for new opened file</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLabel" name="label2">
-           <property name="text">
-            <string>22.10.2010 18:33</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QCheckBox" name="checkBox21">
-           <property name="text">
-            <string>28</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="4">
-          <widget class="QCheckBox" name="checkBox22">
-           <property name="text">
-            <string>32</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QRadioButton" name="radioButton3">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QCheckBox" name="checkBox3">
-           <property name="text">
-            <string>This is very long text for new opened file</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QLabel" name="label3">
-           <property name="text">
-            <string>22.10.2010 18:33</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="3">
-          <widget class="QCheckBox" name="checkBox31">
-           <property name="text">
-            <string>28</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="4">
-          <widget class="QCheckBox" name="checkBox32">
-           <property name="text">
-            <string>32</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>4</x>
-        <y>305</y>
-        <width>788</width>
-        <height>259</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_11">
-         <item>
-          <widget class="QLabel" name="uploadLogLbl">
-           <property name="text">
-            <string>Upload Log</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_9">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="0" column="0">
-            <widget class="QPushButton" name="viewUploadLogBtn">
-             <property name="text">
-              <string>View</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QPushButton" name="saveUploadLogBtn">
-             <property name="text">
-              <string>Save...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="QPushButton" name="printUploadLogBtn">
-             <property name="text">
-              <string>Print</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="clearUploadLogBtn">
-             <property name="text">
-              <string>Clear</string>
+             <property name="flat">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
           </layout>
          </item>
         </layout>
-       </item>
-       <item>
-        <widget class="QListWidget" name="uploadLogList"/>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="debug">
-     <attribute name="title">
-      <string>Debug</string>
-     </attribute>
-     <widget class="QTabWidget" name="tabWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>941</width>
-        <height>431</height>
-       </rect>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="styleSheet">
+         <string>background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(95, 167, 194, 255), stop:1 rgba(255, 255, 255, 255));</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QPushButton" name="uploadBtn">
+             <property name="text">
+              <string>Upload</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rfUploadBtn">
+             <property name="text">
+              <string>RF Upload</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="continueDebugBtn">
+             <property name="text">
+              <string>Continue</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="cleaAllDebugBtn">
+             <property name="text">
+              <string>ClearAll</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>Buffers</string>
+        <string>Programming</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QFormLayout" name="formLayout_5">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="openCFileBtn">
+              <property name="text">
+               <string>Open (*.c)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="openFilePathLbl">
+              <property name="text">
+               <string>C:...This is very long path to the C FileE01-TX.c</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="openCFileDateTimeLbl">
+              <property name="text">
+               <string>22.6.2010 18:27</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Select TR Module</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="trModuleBox">
+              <item>
+               <property name="text">
+                <string>TR-11A</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TR-21A</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TR-31B</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TR-32B</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TR-52B</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TR-53B</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout_4">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::ExpandingFieldsGrow</enum>
+          </property>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QPushButton" name="loadHexIqrfBtn">
+              <property name="text">
+               <string>Load (.hex, .iqrf)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeBtn">
+              <property name="text">
+               <string>Remove</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="1" column="0">
+             <widget class="QRadioButton" name="radioButton0">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="checkBox0">
+              <property name="text">
+               <string>This is very long text for new opened file</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label0">
+              <property name="text">
+               <string>22.10.2010 18:33</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="checkBox00">
+              <property name="text">
+               <string>28</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QCheckBox" name="checkBox01">
+              <property name="text">
+               <string>32</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>Flash [instr]</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>EEPROM [bytes]</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QRadioButton" name="radioButton1">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QCheckBox" name="checkBox1">
+              <property name="text">
+               <string>This is very long text for new opened file</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label1">
+              <property name="text">
+               <string>22.10.2010 18:33</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="checkBox11">
+              <property name="text">
+               <string>28</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="4">
+             <widget class="QCheckBox" name="checkBox12">
+              <property name="text">
+               <string>32</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QRadioButton" name="radioButton2">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QCheckBox" name="checkBox2">
+              <property name="text">
+               <string>This is very long text for new opened file</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label2">
+              <property name="text">
+               <string>22.10.2010 18:33</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QCheckBox" name="checkBox21">
+              <property name="text">
+               <string>28</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="4">
+             <widget class="QCheckBox" name="checkBox22">
+              <property name="text">
+               <string>32</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QRadioButton" name="radioButton3">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QCheckBox" name="checkBox3">
+              <property name="text">
+               <string>This is very long text for new opened file</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label3">
+              <property name="text">
+               <string>22.10.2010 18:33</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QCheckBox" name="checkBox31">
+              <property name="text">
+               <string>28</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="4">
+             <widget class="QCheckBox" name="checkBox32">
+              <property name="text">
+               <string>32</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Module info</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_6">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QPushButton" name="remodModuleInfoBtn">
+               <property name="text">
+                <string>Read</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="coordinatorLbl">
+               <property name="text">
+                <string>Coordinator</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="idprogLbl">
+               <property name="text">
+                <string>ID: 1000589</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="osVerLblb">
+               <property name="text">
+                <string>IQRF OS v2.11 (0878)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="mcuLbl">
+               <property name="text">
+                <string>MCU PIC 16F886</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="copyModuleInfoBtn">
+               <property name="text">
+                <string>C</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="uploadLogLbl">
+              <property name="text">
+               <string>Upload Log</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="viewUploadLogBtn">
+              <property name="text">
+               <string>View</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saveUploadLogBtn">
+              <property name="text">
+               <string>Save...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="printUploadLogBtn">
+              <property name="text">
+               <string>Print</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="clearUploadLogBtn">
+              <property name="text">
+               <string>Clear</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QListWidget" name="uploadLogList"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>EEPROM</string>
+        <string>Debug</string>
        </attribute>
-      </widget>
-      <widget class="QWidget" name="tab_3">
-       <attribute name="title">
-        <string>User RAM</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tab_4">
-       <attribute name="title">
-        <string>Watch</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tab_5">
-       <attribute name="title">
-        <string>System Info</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tab_6">
-       <attribute name="title">
-        <string>Networking</string>
-       </attribute>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="comm">
-     <attribute name="title">
-      <string>Communication</string>
-     </attribute>
-     <layout class="QVBoxLayout" name="verticalLayout_14">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Buffers</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>EEPROM</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>User RAM</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>Watch</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>System Info</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_8">
+           <attribute name="title">
+            <string>Networking</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Communication</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
            <layout class="QVBoxLayout" name="verticalLayout_9">
             <item>
              <widget class="QLabel" name="modeLbl">
@@ -600,126 +694,133 @@
               </item>
              </widget>
             </item>
-            <item>
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
            </layout>
           </item>
-          <item row="0" column="1">
-           <widget class="QGroupBox" name="macrosBox">
-            <property name="title">
-             <string>Macros</string>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
-            <layout class="QGridLayout" name="gridLayout_5">
-             <item row="0" column="0">
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="macrosBox">
+          <property name="title">
+           <string>Macros</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_7">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMinimumSize</enum>
+             </property>
+             <item>
               <widget class="QPushButton" name="m1Btn">
                <property name="text">
                 <string>M1</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="1">
+             <item>
               <widget class="QPushButton" name="m2Btn">
                <property name="text">
                 <string>M2</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="2">
+             <item>
               <widget class="QPushButton" name="m3Btn">
                <property name="text">
                 <string>M3</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="3">
+             <item>
               <widget class="QPushButton" name="m4Btn">
                <property name="text">
                 <string>M4</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="4">
+             <item>
               <widget class="QPushButton" name="m5Btn">
                <property name="text">
                 <string>M5</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="5">
+             <item>
               <widget class="QPushButton" name="m6Btn">
                <property name="text">
                 <string>M6</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="6">
+             <item>
               <widget class="QPushButton" name="m7Btn">
                <property name="text">
                 <string>M7</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="7">
+             <item>
               <widget class="QPushButton" name="m8Btn">
                <property name="text">
                 <string>M8</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="8">
+             <item>
               <widget class="QPushButton" name="m9Btn">
                <property name="text">
                 <string>M9</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="9">
+             <item>
               <widget class="QPushButton" name="m10Btn">
                <property name="text">
                 <string>M10</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="10">
+             <item>
               <widget class="QPushButton" name="m11Btn">
                <property name="text">
                 <string>M11</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="11">
+             <item>
               <widget class="QPushButton" name="m12Btn">
                <property name="text">
                 <string>M12</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="12">
+             <item>
               <widget class="QPushButton" name="m13Btn">
                <property name="text">
                 <string>M13</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="13">
+             <item>
               <widget class="QPushButton" name="m14Btn">
                <property name="text">
                 <string>M14</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="14">
+             <item>
               <widget class="QPushButton" name="m15Btn">
                <property name="text">
                 <string>M15</string>
@@ -727,9 +828,9 @@
               </widget>
              </item>
             </layout>
-           </widget>
-          </item>
-         </layout>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -769,7 +870,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer_10">
+               <spacer name="horizontalSpacer_11">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -831,7 +932,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer_11">
+               <spacer name="horizontalSpacer_13">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -867,290 +968,171 @@
          </layout>
         </item>
        </layout>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>4</x>
-      <y>524</y>
-      <width>670</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="0" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="colorStatusLbl">
-         <property name="styleSheet">
-          <string>background-color: rgb(255, 0, 0);</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Panel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="midLineWidth">
-          <number>0</number>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="osLbl">
-         <property name="frameShape">
-          <enum>QFrame::Panel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="midLineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>OS 2.11 (0878)</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="idLbl">
-         <property name="frameShape">
-          <enum>QFrame::Panel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="midLineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>ID: 01000596</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="moduleTypeLbl">
-         <property name="frameShape">
-          <enum>QFrame::Panel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="midLineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>TR-52B</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="statusLbl">
-         <property name="frameShape">
-          <enum>QFrame::Panel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="midLineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>TR module state 123 789 123 456 789</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QProgressBar" name="loadProgressBar">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-         <property name="textVisible">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkModeBox">
-         <property name="text">
-          <string>Check Mode</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="colorStatusLbl">
+           <property name="styleSheet">
+            <string>background-color: rgb(255, 0, 0);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>0</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="osLbl">
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>OS 2.11 (0878)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="idLbl">
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>ID: 01000596</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="moduleTypeLbl">
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>TR-52B</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="statusLbl">
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>TR module state 123 789 123 456 789</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="loadProgressBar">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="textVisible">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkModeBox">
+           <property name="text">
+            <string>Check Mode</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>4</x>
-      <y>4</y>
-      <width>670</width>
-      <height>47</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QWidget" name="widget" native="true">
-       <property name="styleSheet">
-        <string>background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(95, 167, 194, 255), stop:1 rgba(255, 255, 255, 255))</string>
-       </property>
-       <layout class="QFormLayout" name="formLayout_4">
-        <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QPushButton" name="checkUSBBtn">
-            <property name="text">
-             <string>Check USB Device</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="resetBtn">
-            <property name="text">
-             <string>Reset TR module</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="editBtn">
-            <property name="text">
-             <string>Edit</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_2" native="true">
-       <property name="styleSheet">
-        <string>background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(102, 153, 220, 255), stop:1 rgba(255, 255, 255, 255))
-</string>
-       </property>
-       <layout class="QFormLayout" name="formLayout_5">
-        <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QCheckBox" name="skipAllDebugBox">
-            <property name="text">
-             <string>Skip All Debugs</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="compileBtn">
-            <property name="text">
-             <string>Compile</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="uploadBtn">
-            <property name="text">
-             <string>Upload</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="rfUploadBtn">
-            <property name="text">
-             <string>RF Upload</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="continueDebugBtn">
-            <property name="text">
-             <string>Continue</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="cleaAllDebugBtn">
-            <property name="text">
-             <string>ClearAll</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>678</width>
-     <height>23</height>
+     <width>800</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
