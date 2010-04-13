@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>934</width>
+    <width>1197</width>
     <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>IQRF IDE v3.00d</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1206,8 +1206,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>934</width>
-     <height>26</height>
+     <width>1197</width>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

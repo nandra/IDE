@@ -11,6 +11,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
+    /* set window title depending on version in makefile */
+    this->window()->setWindowTitle("IQRF IDE v3.00d");
 
     ui->setupUi(this);
 
