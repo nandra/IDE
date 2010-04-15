@@ -34,17 +34,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    /*ui->compileBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->compileBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->uploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->rfUploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->add00Btn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->getDataBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);*/
+    ui->cleaAllDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->add00Btn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->getDataBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
 
     /* setup tab widgets buttons */
-    //setup_toolbar_buttons(ui->tabWidget->currentIndex());
+    setup_toolbar_buttons(ui->tabWidget->currentIndex());
 
 
 
@@ -207,6 +208,6 @@ void MainWindow::on_modeBox_activated(int index)
      * to show raw terminal buttons in toolbar
      */
 
-    //if (index == 1)
-        //setup_toolbar_buttons(ui->tabWidget->count() + index);
+    if (index == 1)
+        setup_toolbar_buttons(ui->tabWidget->count() + index);
 }
