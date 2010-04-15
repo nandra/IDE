@@ -8,6 +8,20 @@
 #include "dialog_misc.h"
 #include <QTranslator>
 #include "style.h"
+#include <QList>
+
+enum toolbarBtns{
+    COMPILE,
+    UPLOAD,
+    RF_UPLOAD,
+    CONTINUE,
+    SKIP_ALL,
+    CRCM,
+    ADD_00,
+    GET_DATA,
+    SPI_CHECK,
+    BTN_MAX
+};
 
 namespace Ui
 {
@@ -23,6 +37,8 @@ public:
     ~MainWindow();
     void changeEvent(QEvent *event);
     void setup_toolbar_buttons(int index);
+    QPushButton *create_toolbar_button(const QString &name, bool disabled = false);
+
 private:
     Ui::MainWindow *ui;
     DialogAbout *about;
@@ -30,6 +46,7 @@ private:
     DialogEditor *dialogEditor;
     DialogMisc *misc;
     QTranslator *translator;
+    QList<QPushButton *> toolbar;
 
 private slots:
     void on_modeBox_activated(int index);
