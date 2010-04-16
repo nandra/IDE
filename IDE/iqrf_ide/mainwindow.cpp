@@ -30,24 +30,24 @@ MainWindow::MainWindow(QWidget *parent)
     }
     QApplication::installTranslator(translator);
 
+    toolbar.insert(COMPILE, create_toolbar_button(tr("Compile")));
+    toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload")));
+    toolbar.insert(RF_UPLOAD, create_toolbar_button(tr("RF Upload")));
+    toolbar.insert(CONTINUE, create_toolbar_button(tr("Continue")));
+    toolbar.insert(SKIP_ALL, create_toolbar_button(tr("Skip All")));
+    toolbar.insert(CRCM, create_toolbar_button(tr("CRCM")));
+    toolbar.insert(ADD_00, create_toolbar_button(tr("Add.00.")));
+    toolbar.insert(GET_DATA, create_toolbar_button(tr("Get Data")));
+    toolbar.insert(SPI_CHECK, create_toolbar_button(tr("SPI Check")));
+
+
     /* style setup for mainwindow */
     ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
     ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->compileBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->uploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->rfUploadBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->continueDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->cleaAllDebugBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->crcmBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->add00Btn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->getDataBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->spiCheckBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
-
-
 
     this->about = new DialogAbout(parent);
     this->compiler = new DialogCompiler(parent);
@@ -73,61 +73,41 @@ void MainWindow::setup_toolbar_buttons(int index)
     switch (index) {
     /* programming */
     case 0:
-        ui->continueDebugBtn->setVisible(false);
-        ui->cleaAllDebugBtn->setVisible(false);
-        //ui->skipAllDebugBox->setVisible(false);
-        //ui->compileBtn->setVisible(true);
-        ui->uploadBtn->setVisible(true);
-        ui->uploadBtn->setDisabled(true);
-        ui->rfUploadBtn->setVisible(true);
-        ui->rfUploadBtn->setDisabled(true);
-        /*ui->crcmBtn->setVisible(false);
-        ui->add00Btn->setVisible(false);
-        ui->getDataBtn->setVisible(false);
-        ui->spiCheckBtn->setVisible(false);*/
+        ui->horizontalLayout_3->addWidget(toolbar[COMPILE]);
+        ui->horizontalLayout_3->addWidget(toolbar[UPLOAD]);
+        ui->horizontalLayout_3->addWidget(toolbar[RF_UPLOAD]);
         break;
     /* debugging */
     case 1:
-        ui->continueDebugBtn->setVisible(true);
-        ui->cleaAllDebugBtn->setVisible(true);
-        //ui->skipAllDebugBox->setVisible(true);
-        ///ui->compileBtn->setVisible(false);
-        ui->uploadBtn->setVisible(false);
-        ui->rfUploadBtn->setVisible(false);
-        /*ui->crcmBtn->setVisible(false);
-        ui->add00Btn->setVisible(false);
-        ui->getDataBtn->setVisible(false);
-        ui->spiCheckBtn->setVisible(false);*/
+        ui->horizontalLayout_3->removeWidget(toolbar[COMPILE]);
+        toolbar[COMPILE]->setVisible(false);
+        ui->horizontalLayout_3->removeWidget(toolbar[UPLOAD]);
+        toolbar[UPLOAD]->setVisible(false);
+        ui->horizontalLayout_3->removeWidget(toolbar[RF_UPLOAD]);
+        toolbar[RF_UPLOAD]->setVisible(false);
+        ui->horizontalLayout_3->addWidget(toolbar[CONTINUE]);
+        ui->horizontalLayout_3->addWidget(toolbar[SKIP_ALL]);
         break;
     case 2:
-        ui->continueDebugBtn->setVisible(false);
-        ui->cleaAllDebugBtn->setVisible(false);
-        //ui->skipAllDebugBox->setVisible(false);
-        ui->uploadBtn->setVisible(false);
-        ui->rfUploadBtn->setVisible(false);
-       // ui->compileBtn->setVisible(false);
-        /* raw mode */
-        /*if (ui->modeBox->currentIndex() == 1) {
-            ui->crcmBtn->setVisible(true);
-            ui->add00Btn->setVisible(true);
-            ui->getDataBtn->setVisible(true);
-            ui->spiCheckBtn->setVisible(true);
-        } else {
-            ui->crcmBtn->setVisible(false);
-            ui->add00Btn->setVisible(false);
-            ui->getDataBtn->setVisible(false);
-            ui->spiCheckBtn->setVisible(false);
-        }*/
+        /* visible nothing */
         break;
      default:
-        /*ui->crcmBtn->setVisible(true);
-        ui->add00Btn->setVisible(true);
-        ui->getDataBtn->setVisible(true);
-        ui->spiCheckBtn->setVisible(true);*/
+        ui->horizontalLayout_3->addWidget(toolbar[CRCM]);
+        ui->horizontalLayout_3->addWidget(toolbar[ADD_00]);
+        ui->horizontalLayout_3->addWidget(toolbar[GET_DATA]);
+        ui->horizontalLayout_3->addWidget(toolbar[SPI_CHECK]);
         break;
     }
 }
 
+QPushButton *MainWindow::create_toolbar_button(const QString &name, bool disabled)
+{
+    QPushButton *btn = new QPushButton(name);
+    btn->setFlat(true);
+    btn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    btn->setDisabled(disabled);
+    return btn;
+}
 
 /* public slots */
 
