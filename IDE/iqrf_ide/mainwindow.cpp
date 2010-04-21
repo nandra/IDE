@@ -35,18 +35,34 @@ MainWindow::MainWindow(QWidget *parent)
     toolBar->setMovable(false);
     toolBar->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
                            "x2:1, y2:0, stop:0 rgba(40, 130, 240, 255), stop:1 rgba(255, 255, 255, 255));}");
-    toolBar1 = new QToolBar(parent);
-    toolBar1->setMovable(false);
-    toolBar1->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+
+    toolBarProg = new QToolBar(parent);
+    toolBarProg->setMovable(false);
+    toolBarProg->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+                            "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
+
+    toolBarDebug = new QToolBar(parent);
+    toolBarDebug->setMovable(false);
+    toolBarDebug->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+                            "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
+
+    toolBarComm = new QToolBar(parent);
+    toolBarComm->setMovable(false);
+    toolBarComm->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+                            "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
+
+    toolBarEmpty = new QToolBar(parent);
+    toolBarEmpty->setMovable(false);
+    toolBarEmpty->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
                             "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
 
     toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB")));
     toolbar.insert(RESET, create_toolbar_button(tr("Reset")));
     toolbar.insert(EDIT, create_toolbar_button(tr("Edit")));
     toolbar.insert(COMPILE, create_toolbar_button(tr("Compile")));
-    toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload")));
-    toolbar.insert(RF_UPLOAD, create_toolbar_button(tr("RF Upload")));
-    toolbar.insert(CONTINUE, create_toolbar_button(tr("Continue")));
+    toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload"), true));
+    toolbar.insert(RF_UPLOAD, create_toolbar_button(tr("RF Upload"), true));
+    toolbar.insert(CONTINUE, create_toolbar_button(tr("Continue"), true));
     toolbar.insert(SKIP_ALL, create_toolbar_button(tr("Skip All")));
     toolbar.insert(CRCM, create_toolbar_button(tr("CRCM")));
     toolbar.insert(ADD_00, create_toolbar_button(tr("Add.00.")));
@@ -60,8 +76,19 @@ MainWindow::MainWindow(QWidget *parent)
     toolBar->addWidget(toolbar[RESET]);
     toolBar->addWidget(toolbar[EDIT]);
 
+    toolBarProg->addWidget(toolbar[COMPILE]);
+    toolBarProg->addWidget(toolbar[UPLOAD]);
+    toolBarProg->addWidget(toolbar[RF_UPLOAD]);
+
+    toolBarDebug->addWidget(toolbar[CONTINUE]);
+    toolBarDebug->addWidget(toolbar[SKIP_ALL]);
+
+    toolBarComm->addWidget(toolbar[CRCM]);
+    toolBarComm->addWidget(toolbar[ADD_00]);
+    toolBarComm->addWidget(toolbar[GET_DATA]);
+    toolBarComm->addWidget(toolbar[SPI_CHECK]);
+
     this->addToolBar(toolBar);
-    this->addToolBar(toolBar1);
 
     QLabel *st = new QLabel(tr(""));
     st->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -117,35 +144,32 @@ void MainWindow::changeEvent(QEvent *event)
 
 void MainWindow::setup_toolbar_buttons(int index)
 {
+    qDebug() << "index " << index;
+    this->removeToolBar(toolBarProg);
+    this->removeToolBar(toolBarDebug);
+    this->removeToolBar(toolBarComm);
+    this->removeToolBar(toolBarEmpty);
+
     switch (index) {
     /* programming */
     case 0:
-        toolBar1->addWidget(toolbar[COMPILE]);
-        toolBar1->addWidget(toolbar[UPLOAD]);
-        toolBar1->addWidget(toolbar[RF_UPLOAD]);
-        /*ui->horizontalLayout_3->addWidget(toolbar[COMPILE]);
-        ui->horizontalLayout_3->addWidget(toolbar[UPLOAD]);
-        ui->horizontalLayout_3->addWidget(toolbar[RF_UPLOAD]);*/
+        this->addToolBar(toolBarProg);
+        toolBarProg->show();
         break;
     /* debugging */
     case 1:
-        /*ui->horizontalLayout_3->removeWidget(toolbar[COMPILE]);
-        toolbar[COMPILE]->setVisible(false);
-        ui->horizontalLayout_3->removeWidget(toolbar[UPLOAD]);
-        toolbar[UPLOAD]->setVisible(false);
-        ui->horizontalLayout_3->removeWidget(toolbar[RF_UPLOAD]);
-        toolbar[RF_UPLOAD]->setVisible(false);
-        ui->horizontalLayout_3->addWidget(toolbar[CONTINUE]);
-        ui->horizontalLayout_3->addWidget(toolbar[SKIP_ALL]);*/
+        this->addToolBar(toolBarDebug);
+        toolBarDebug->show();
         break;
+    /* communication */
     case 2:
-        /* visible nothing */
+        this->addToolBar(toolBarEmpty);
+        toolBarEmpty->show();
         break;
-     default:
-       /* ui->horizontalLayout_3->addWidget(toolbar[CRCM]);
-        ui->horizontalLayout_3->addWidget(toolbar[ADD_00]);
-        ui->horizontalLayout_3->addWidget(toolbar[GET_DATA]);
-        ui->horizontalLayout_3->addWidget(toolbar[SPI_CHECK]);*/
+    /* used tab count +1 for comm terminal buttons */
+    default:
+        this->addToolBar(toolBarComm);
+        toolBarComm->show();
         break;
     }
 }
@@ -165,12 +189,8 @@ QPushButton *MainWindow::create_toolbar_button(const QString &name, bool disable
 void MainWindow::on_actionShow_IQRF_USB_Device_info_triggered()
 {
     usbInfo->show();
-
-    /*QMessageBox::about(this, tr("USB device info"),
-                               tr("Device type:")+ "CK-USB-02\n"+\
-                                tr("FW Version:")+ "2.01\n"+\
-                                           tr("ID:")+ "1234657"); */
 }
+
 /* open nabout menu dialog */
 void MainWindow::on_actionAbout_2_triggered()
 {

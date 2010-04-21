@@ -53,7 +53,7 @@ private:
     DialogUsbInfo *usbInfo;
     QTranslator *translator;
     QList<QPushButton *> toolbar;
-    QToolBar *toolBar, *toolBar1;
+    QToolBar *toolBar, *toolBarProg, *toolBarDebug, *toolBarComm, *toolBarEmpty;
 
 private slots:
     void on_modeBox_activated(int index);
