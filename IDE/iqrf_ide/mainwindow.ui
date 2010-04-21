@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
+    <width>708</width>
     <height>612</height>
    </rect>
   </property>
@@ -30,7 +30,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -349,7 +349,7 @@
            <string>Module info</string>
           </property>
           <layout class="QFormLayout" name="formLayout_6">
-           <item row="0" column="0">
+           <item row="0" column="0" colspan="2">
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
               <widget class="QPushButton" name="remodModuleInfoBtn">
@@ -357,6 +357,19 @@
                 <string>Read</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item>
               <widget class="QLabel" name="coordinatorLbl">
@@ -542,12 +555,12 @@
        <attribute name="title">
         <string>Communication</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_6">
-            <item>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
              <widget class="QLabel" name="modeLbl">
               <property name="layoutDirection">
                <enum>Qt::LeftToRight</enum>
@@ -560,7 +573,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item row="1" column="0">
              <widget class="QComboBox" name="modeBox">
               <item>
                <property name="text">
@@ -619,98 +632,98 @@
                <item>
                 <widget class="QToolButton" name="m15Btn">
                  <property name="text">
-                  <string>M15</string>
+                  <string>M2</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m14Btn">
                  <property name="text">
-                  <string>M14</string>
+                  <string>M3</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m13Btn">
                  <property name="text">
-                  <string>M13</string>
+                  <string>M4</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m12Btn">
                  <property name="text">
-                  <string>M12</string>
+                  <string>M5</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m11Btn">
                  <property name="text">
-                  <string>M11</string>
+                  <string>M6</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m10Btn">
                  <property name="text">
-                  <string>M10</string>
+                  <string>M7</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m9Btn">
                  <property name="text">
-                  <string>M9</string>
+                  <string>M8</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m8Btn">
                  <property name="text">
-                  <string>M8</string>
+                  <string>M9</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m7Btn">
                  <property name="text">
-                  <string>M7</string>
+                  <string>M10</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m6Btn">
                  <property name="text">
-                  <string>M6</string>
+                  <string>M11</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m5Btn">
                  <property name="text">
-                  <string>M5</string>
+                  <string>M12</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m4Btn">
                  <property name="text">
-                  <string>M4</string>
+                  <string>M13</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m3Btn">
                  <property name="text">
-                  <string>M3</string>
+                  <string>M14</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QToolButton" name="m2Btn">
                  <property name="text">
-                  <string>M2</string>
+                  <string>M15</string>
                  </property>
                 </widget>
                </item>
@@ -867,7 +880,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>632</width>
+     <width>708</width>
      <height>20</height>
     </rect>
    </property>

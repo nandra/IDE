@@ -77,10 +77,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusBar->insertWidget(4, id);
 
     QProgressBar *bar = new QProgressBar(parent);
-    ui->statusBar->insertWidget(5, bar);
+    ui->statusBar->addPermanentWidget(bar);
 
     QCheckBox *box = new QCheckBox(tr("Check mode"));
-    ui->statusBar->insertWidget(6, box);
+    box->setChecked(true);
+    ui->statusBar->addPermanentWidget(box);
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
@@ -89,7 +90,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->compiler = new DialogCompiler(parent);
     this->dialogEditor = new DialogEditor(parent);
     this->misc = new DialogMisc(parent);
-
+    this->usbInfo = new DialogUsbInfo(parent);
     connect(misc, SIGNAL(finished(int)), this,SLOT(lang_change()));
 }
 
@@ -153,10 +154,12 @@ QPushButton *MainWindow::create_toolbar_button(const QString &name, bool disable
 /* open usb device info dialog */
 void MainWindow::on_actionShow_IQRF_USB_Device_info_triggered()
 {
-    QMessageBox::about(this, tr("USB device info"),
+    usbInfo->show();
+
+    /*QMessageBox::about(this, tr("USB device info"),
                                tr("Device type:")+ "CK-USB-02\n"+\
                                 tr("FW Version:")+ "2.01\n"+\
-                                           tr("ID:")+ "1234657");
+                                           tr("ID:")+ "1234657"); */
 }
 /* open nabout menu dialog */
 void MainWindow::on_actionAbout_2_triggered()

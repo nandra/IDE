@@ -6,6 +6,7 @@
 #include "dialog_compiler.h"
 #include "dialog_editor.h"
 #include "dialog_misc.h"
+#include "dialog_usb_info.h"
 #include <QTranslator>
 #include "style.h"
 #include <QList>
@@ -48,6 +49,7 @@ private:
     DialogCompiler *compiler;
     DialogEditor *dialogEditor;
     DialogMisc *misc;
+    DialogUsbInfo *usbInfo;
     QTranslator *translator;
     QList<QPushButton *> toolbar;
 
