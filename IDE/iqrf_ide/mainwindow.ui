@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>708</width>
+    <width>712</width>
     <height>612</height>
    </rect>
   </property>
@@ -190,12 +190,18 @@
               <property name="text">
                <string/>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1">
              <widget class="QCheckBox" name="checkBox0">
               <property name="text">
                <string>This is very long text for new opened file</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -211,12 +217,18 @@
               <property name="text">
                <string>28</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="4">
              <widget class="QCheckBox" name="checkBox01">
               <property name="text">
                <string>32</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -246,6 +258,9 @@
               <property name="text">
                <string>This is very long text for new opened file</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="2" column="2">
@@ -258,14 +273,20 @@
             <item row="2" column="3">
              <widget class="QCheckBox" name="checkBox11">
               <property name="text">
-               <string>28</string>
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
             <item row="2" column="4">
              <widget class="QCheckBox" name="checkBox12">
               <property name="text">
-               <string>32</string>
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -279,28 +300,28 @@
             <item row="3" column="1">
              <widget class="QCheckBox" name="checkBox2">
               <property name="text">
-               <string>This is very long text for new opened file</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="3" column="2">
              <widget class="QLabel" name="label2">
               <property name="text">
-               <string>22.10.2010 18:33</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="3" column="3">
              <widget class="QCheckBox" name="checkBox21">
               <property name="text">
-               <string>28</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="3" column="4">
              <widget class="QCheckBox" name="checkBox22">
               <property name="text">
-               <string>32</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -314,28 +335,28 @@
             <item row="4" column="1">
              <widget class="QCheckBox" name="checkBox3">
               <property name="text">
-               <string>This is very long text for new opened file</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="4" column="2">
              <widget class="QLabel" name="label3">
               <property name="text">
-               <string>22.10.2010 18:33</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="4" column="3">
              <widget class="QCheckBox" name="checkBox31">
               <property name="text">
-               <string>28</string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="4" column="4">
              <widget class="QCheckBox" name="checkBox32">
               <property name="text">
-               <string>32</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -880,7 +901,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>708</width>
+     <width>712</width>
      <height>20</height>
     </rect>
    </property>

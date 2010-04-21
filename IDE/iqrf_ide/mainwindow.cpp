@@ -129,6 +129,16 @@ MainWindow::MainWindow(QWidget *parent)
     this->misc = new DialogMisc(parent);
     this->usbInfo = new DialogUsbInfo(parent);
     connect(misc, SIGNAL(finished(int)), this,SLOT(lang_change()));
+
+    /*FIXME!!! only for presentation remove */
+    ui->checkBox11->setDisabled(true);
+    ui->checkBox12->setDisabled(true);
+    ui->checkBox2->setDisabled(true);
+    ui->checkBox3->setDisabled(true);
+    ui->checkBox21->setDisabled(true);
+    ui->checkBox22->setDisabled(true);
+    ui->checkBox31->setDisabled(true);
+    ui->checkBox32->setDisabled(true);
 }
 
 MainWindow::~MainWindow()
