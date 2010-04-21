@@ -10,6 +10,7 @@
 #include <QTranslator>
 #include "style.h"
 #include <QList>
+#include <QToolBar>
 
 enum toolbarBtns{
     CHECK_USB,
@@ -52,6 +53,7 @@ private:
     DialogUsbInfo *usbInfo;
     QTranslator *translator;
     QList<QPushButton *> toolbar;
+    QToolBar *toolBar, *toolBar1;
 
 private slots:
     void on_modeBox_activated(int index);

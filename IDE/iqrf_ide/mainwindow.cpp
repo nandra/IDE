@@ -31,6 +31,15 @@ MainWindow::MainWindow(QWidget *parent)
     }
     QApplication::installTranslator(translator);
 
+    toolBar = new QToolBar(parent);
+    toolBar->setMovable(false);
+    toolBar->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+                           "x2:1, y2:0, stop:0 rgba(40, 130, 240, 255), stop:1 rgba(255, 255, 255, 255));}");
+    toolBar1 = new QToolBar(parent);
+    toolBar1->setMovable(false);
+    toolBar1->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
+                            "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
+
     toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB")));
     toolbar.insert(RESET, create_toolbar_button(tr("Reset")));
     toolbar.insert(EDIT, create_toolbar_button(tr("Edit")));
@@ -46,12 +55,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* style setup for mainwindow */
-    //ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    //ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->toolBar->addWidget(toolbar[CHECK_USB]);
-    ui->toolBar->addWidget(toolbar[RESET]);
-    ui->toolBar->addWidget(toolbar[EDIT]);
+
+    toolBar->addWidget(toolbar[CHECK_USB]);
+    toolBar->addWidget(toolbar[RESET]);
+    toolBar->addWidget(toolbar[EDIT]);
+
+    this->addToolBar(toolBar);
+    this->addToolBar(toolBar1);
 
     QLabel *st = new QLabel(tr(""));
     st->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -110,9 +120,9 @@ void MainWindow::setup_toolbar_buttons(int index)
     switch (index) {
     /* programming */
     case 0:
-        ui->toolBar->addWidget(toolbar[COMPILE]);
-        ui->toolBar->addWidget(toolbar[UPLOAD]);
-        ui->toolBar->addWidget(toolbar[RF_UPLOAD]);
+        toolBar1->addWidget(toolbar[COMPILE]);
+        toolBar1->addWidget(toolbar[UPLOAD]);
+        toolBar1->addWidget(toolbar[RF_UPLOAD]);
         /*ui->horizontalLayout_3->addWidget(toolbar[COMPILE]);
         ui->horizontalLayout_3->addWidget(toolbar[UPLOAD]);
         ui->horizontalLayout_3->addWidget(toolbar[RF_UPLOAD]);*/
