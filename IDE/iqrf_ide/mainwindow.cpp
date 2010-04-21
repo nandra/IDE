@@ -130,6 +130,14 @@ MainWindow::MainWindow(QWidget *parent)
     this->usbInfo = new DialogUsbInfo(parent);
     connect(misc, SIGNAL(finished(int)), this,SLOT(lang_change()));
 
+    ui->trModuleBox->addItem(tr("TR-11A"));
+    ui->trModuleBox->addItem(tr("TR-21A"));
+    ui->trModuleBox->addItem(tr("TR-31B"));
+    ui->trModuleBox->addItem(tr("TR-32B"));
+    ui->trModuleBox->addItem(tr("TR-52B"));
+    ui->trModuleBox->addItem(tr("TR-53B"));
+    ui->trModuleBox->setCurrentIndex(4);
+
     /*FIXME!!! only for presentation remove */
     ui->checkBox11->setDisabled(true);
     ui->checkBox12->setDisabled(true);

@@ -118,38 +118,8 @@
             <item>
              <widget class="QComboBox" name="trModuleBox">
               <property name="currentIndex">
-               <number>4</number>
+               <number>-1</number>
               </property>
-              <item>
-               <property name="text">
-                <string>TR-11A</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>TR-21A</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>TR-31B</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>TR-32B</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>TR-52B</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>TR-53B</string>
-               </property>
-              </item>
              </widget>
             </item>
            </layout>
