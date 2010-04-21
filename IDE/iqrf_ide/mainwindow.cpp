@@ -56,8 +56,8 @@ MainWindow::MainWindow(QWidget *parent)
     toolBarEmpty->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
                             "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
 
-    toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB")));
-    toolbar.insert(RESET, create_toolbar_button(tr("Reset")));
+    toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB Device")));
+    toolbar.insert(RESET, create_toolbar_button(tr("Reset TR Module")));
     toolbar.insert(EDIT, create_toolbar_button(tr("Edit")));
     toolbar.insert(COMPILE, create_toolbar_button(tr("Compile")));
     toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload"), true));
@@ -154,7 +154,6 @@ void MainWindow::changeEvent(QEvent *event)
 
 void MainWindow::setup_toolbar_buttons(int index)
 {
-    qDebug() << "index " << index;
     this->removeToolBar(toolBarProg);
     this->removeToolBar(toolBarDebug);
     this->removeToolBar(toolBarComm);
