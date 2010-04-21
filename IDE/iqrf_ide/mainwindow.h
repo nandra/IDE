@@ -11,6 +11,9 @@
 #include <QList>
 
 enum toolbarBtns{
+    CHECK_USB,
+    RESET,
+    EDIT,
     COMPILE,
     UPLOAD,
     RF_UPLOAD,

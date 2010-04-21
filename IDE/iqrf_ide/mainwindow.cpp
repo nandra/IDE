@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QStyle>
 #include <QPushButton>
+#include <QProgressBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -30,6 +31,9 @@ MainWindow::MainWindow(QWidget *parent)
     }
     QApplication::installTranslator(translator);
 
+    toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB")));
+    toolbar.insert(RESET, create_toolbar_button(tr("Reset")));
+    toolbar.insert(EDIT, create_toolbar_button(tr("Edit")));
     toolbar.insert(COMPILE, create_toolbar_button(tr("Compile")));
     toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload")));
     toolbar.insert(RF_UPLOAD, create_toolbar_button(tr("RF Upload")));
@@ -42,9 +46,41 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* style setup for mainwindow */
-    ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
-    ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->checkUSBBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->resetBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    //ui->editBtn->setStyleSheet(TOOLBAR_BTN_STYLE);
+    ui->toolBar->addWidget(toolbar[CHECK_USB]);
+    ui->toolBar->addWidget(toolbar[RESET]);
+    ui->toolBar->addWidget(toolbar[EDIT]);
+
+    QLabel *st = new QLabel(tr(""));
+    st->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+    QLabel *stText = new QLabel(tr("This is module status text"));
+    stText->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+    QLabel *moduleType = new QLabel(tr("TR-52B"));
+    moduleType->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+    QLabel *os = new QLabel(tr("OS 2.11 (0878)"));
+    os->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+    QLabel *id = new QLabel(tr("ID:10000567"));
+    id->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+
+
+    ui->statusBar->insertWidget(0, st);
+
+    ui->statusBar->insertWidget(1, stText);
+    ui->statusBar->insertWidget(2, moduleType);
+    ui->statusBar->insertWidget(3, os);
+    ui->statusBar->insertWidget(4, id);
+
+    QProgressBar *bar = new QProgressBar(parent);
+    ui->statusBar->insertWidget(5, bar);
+
+    QCheckBox *box = new QCheckBox(tr("Check mode"));
+    ui->statusBar->insertWidget(6, box);
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
@@ -73,29 +109,32 @@ void MainWindow::setup_toolbar_buttons(int index)
     switch (index) {
     /* programming */
     case 0:
-        ui->horizontalLayout_3->addWidget(toolbar[COMPILE]);
+        ui->toolBar->addWidget(toolbar[COMPILE]);
+        ui->toolBar->addWidget(toolbar[UPLOAD]);
+        ui->toolBar->addWidget(toolbar[RF_UPLOAD]);
+        /*ui->horizontalLayout_3->addWidget(toolbar[COMPILE]);
         ui->horizontalLayout_3->addWidget(toolbar[UPLOAD]);
-        ui->horizontalLayout_3->addWidget(toolbar[RF_UPLOAD]);
+        ui->horizontalLayout_3->addWidget(toolbar[RF_UPLOAD]);*/
         break;
     /* debugging */
     case 1:
-        ui->horizontalLayout_3->removeWidget(toolbar[COMPILE]);
+        /*ui->horizontalLayout_3->removeWidget(toolbar[COMPILE]);
         toolbar[COMPILE]->setVisible(false);
         ui->horizontalLayout_3->removeWidget(toolbar[UPLOAD]);
         toolbar[UPLOAD]->setVisible(false);
         ui->horizontalLayout_3->removeWidget(toolbar[RF_UPLOAD]);
         toolbar[RF_UPLOAD]->setVisible(false);
         ui->horizontalLayout_3->addWidget(toolbar[CONTINUE]);
-        ui->horizontalLayout_3->addWidget(toolbar[SKIP_ALL]);
+        ui->horizontalLayout_3->addWidget(toolbar[SKIP_ALL]);*/
         break;
     case 2:
         /* visible nothing */
         break;
      default:
-        ui->horizontalLayout_3->addWidget(toolbar[CRCM]);
+       /* ui->horizontalLayout_3->addWidget(toolbar[CRCM]);
         ui->horizontalLayout_3->addWidget(toolbar[ADD_00]);
         ui->horizontalLayout_3->addWidget(toolbar[GET_DATA]);
-        ui->horizontalLayout_3->addWidget(toolbar[SPI_CHECK]);
+        ui->horizontalLayout_3->addWidget(toolbar[SPI_CHECK]);*/
         break;
     }
 }

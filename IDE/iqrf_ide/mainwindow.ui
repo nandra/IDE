@@ -6,102 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>770</width>
+    <width>632</width>
     <height>612</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>IQRF IDE v3.00d</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_7">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QFrame" name="frame_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string>background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(102, 153, 220, 255), stop:1 rgba(255, 255, 255, 255));</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QFormLayout" name="formLayout_2">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QPushButton" name="checkUSBBtn">
-             <property name="text">
-              <string>Check USB Device</string>
-             </property>
-             <property name="flat">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="editBtn">
-             <property name="text">
-              <string>Edit</string>
-             </property>
-             <property name="flat">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="resetBtn">
-             <property name="text">
-              <string>Reset TR module</string>
-             </property>
-             <property name="flat">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QFrame" name="frame_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string>background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(95, 167, 194, 255), stop:1 rgba(255, 255, 255, 255));</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QFormLayout" name="formLayout_3">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </item>
+   <layout class="QVBoxLayout" name="verticalLayout_8">
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -113,9 +36,12 @@
        <attribute name="title">
         <string>Programming</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <layout class="QFormLayout" name="formLayout_5">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_2">
             <item row="0" column="0">
@@ -512,63 +438,59 @@
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="uploadLogLbl">
-              <property name="text">
-               <string>Upload Log</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_9">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="viewUploadLogBtn">
-              <property name="text">
-               <string>View</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="saveUploadLogBtn">
-              <property name="text">
-               <string>Save...</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="printUploadLogBtn">
-              <property name="text">
-               <string>Print</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="clearUploadLogBtn">
-              <property name="text">
-               <string>Clear</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QLabel" name="uploadLogLbl">
+            <property name="text">
+             <string>Upload Log</string>
+            </property>
+           </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="uploadLogList"/>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="viewUploadLogBtn">
+            <property name="text">
+             <string>View</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveUploadLogBtn">
+            <property name="text">
+             <string>Save...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="printUploadLogBtn">
+            <property name="text">
+             <string>Print</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearUploadLogBtn">
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="uploadLogList"/>
         </item>
        </layout>
       </widget>
@@ -580,7 +502,7 @@
         <item>
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -620,11 +542,11 @@
        <attribute name="title">
         <string>Communication</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_9">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
              <widget class="QLabel" name="modeLbl">
               <property name="layoutDirection">
@@ -655,7 +577,7 @@
            </layout>
           </item>
           <item>
-           <spacer name="horizontalSpacer_10">
+           <spacer name="horizontalSpacer_2">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -667,128 +589,137 @@
             </property>
            </spacer>
           </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="macrosBox">
-          <property name="title">
-           <string>Macros</string>
-          </property>
-          <layout class="QFormLayout" name="formLayout_7">
-           <item row="0" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <property name="sizeConstraint">
-              <enum>QLayout::SetMinimumSize</enum>
-             </property>
+          <item>
+           <widget class="QGroupBox" name="macrosBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Macros</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
              <item>
-              <widget class="QPushButton" name="m1Btn">
-               <property name="text">
-                <string>M1</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m2Btn">
-               <property name="text">
-                <string>M2</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m3Btn">
-               <property name="text">
-                <string>M3</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m4Btn">
-               <property name="text">
-                <string>M4</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m5Btn">
-               <property name="text">
-                <string>M5</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m6Btn">
-               <property name="text">
-                <string>M6</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m7Btn">
-               <property name="text">
-                <string>M7</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m8Btn">
-               <property name="text">
-                <string>M8</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m9Btn">
-               <property name="text">
-                <string>M9</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m10Btn">
-               <property name="text">
-                <string>M10</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m11Btn">
-               <property name="text">
-                <string>M11</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m12Btn">
-               <property name="text">
-                <string>M12</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m13Btn">
-               <property name="text">
-                <string>M13</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m14Btn">
-               <property name="text">
-                <string>M14</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="m15Btn">
-               <property name="text">
-                <string>M15</string>
-               </property>
-              </widget>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QToolButton" name="m1Btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>23</width>
+                   <height>23</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>M1</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m15Btn">
+                 <property name="text">
+                  <string>M15</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m14Btn">
+                 <property name="text">
+                  <string>M14</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m13Btn">
+                 <property name="text">
+                  <string>M13</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m12Btn">
+                 <property name="text">
+                  <string>M12</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m11Btn">
+                 <property name="text">
+                  <string>M11</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m10Btn">
+                 <property name="text">
+                  <string>M10</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m9Btn">
+                 <property name="text">
+                  <string>M9</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m8Btn">
+                 <property name="text">
+                  <string>M8</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m7Btn">
+                 <property name="text">
+                  <string>M7</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m6Btn">
+                 <property name="text">
+                  <string>M6</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m5Btn">
+                 <property name="text">
+                  <string>M5</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m4Btn">
+                 <property name="text">
+                  <string>M4</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m3Btn">
+                 <property name="text">
+                  <string>M3</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="m2Btn">
+                 <property name="text">
+                  <string>M2</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
-           </item>
-          </layout>
-         </widget>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -929,159 +860,6 @@
       </widget>
      </widget>
     </item>
-    <item>
-     <widget class="QFrame" name="frame">
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLabel" name="colorStatusLbl">
-           <property name="styleSheet">
-            <string>background-color: rgb(255, 0, 0);</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>0</number>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="osLbl">
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>1</number>
-           </property>
-           <property name="text">
-            <string>OS 2.11 (0878)</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="idLbl">
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>1</number>
-           </property>
-           <property name="text">
-            <string>ID: 01000596</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="moduleTypeLbl">
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>1</number>
-           </property>
-           <property name="text">
-            <string>TR-52B</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="statusLbl">
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>1</number>
-           </property>
-           <property name="text">
-            <string>TR module state 123 789 123 456 789</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QProgressBar" name="loadProgressBar">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="value">
-            <number>0</number>
-           </property>
-           <property name="textVisible">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="checkModeBox">
-           <property name="text">
-            <string>Check Mode</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -1089,8 +867,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>770</width>
-     <height>26</height>
+     <width>632</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1149,6 +927,21 @@
    <addaction name="menuTools"/>
    <addaction name="menuHelp"/>
   </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(192, 198, 245, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew">
    <property name="text">
     <string>New</string>
