@@ -131,7 +131,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusBar->insertWidget(4, id);
 
     QProgressBar *bar = new QProgressBar(parent);
-    bar->setMaximumHeight(7);
+    bar->setMaximumHeight(10);
     bar->setMaximumWidth(100);
     ui->statusBar->addPermanentWidget(bar);
 
