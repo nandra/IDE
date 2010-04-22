@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/lupa.ico</file>
+        <file>images/iqrf_logo.gif</file>
+    </qresource>
+</RCC>
