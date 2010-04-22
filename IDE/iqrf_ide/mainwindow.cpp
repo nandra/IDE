@@ -104,7 +104,6 @@ MainWindow::MainWindow(QWidget *parent)
     w->setLayout(hbox);
     toolBarMid->addWidget(w);
 
-
     this->addToolBar(toolBar);
     this->addToolBar(toolBarMid);
 
@@ -113,6 +112,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QLabel *stText = new QLabel(tr("This is module status text"));
     stText->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    stText->setMinimumWidth(300);
 
     QLabel *moduleType = new QLabel(tr("TR-52B"));
     moduleType->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -131,7 +131,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusBar->insertWidget(4, id);
 
     QProgressBar *bar = new QProgressBar(parent);
+    bar->setMaximumHeight(7);
+    bar->setMaximumWidth(100);
     ui->statusBar->addPermanentWidget(bar);
+
 
     QCheckBox *box = new QCheckBox(tr("Check mode"));
     box->setChecked(true);
