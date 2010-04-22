@@ -75,6 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* style setup for mainwindow */
+    this->skipAllBox = new QCheckBox(tr("Skip all"));
 
     toolBar->addWidget(toolbar[CHECK_USB]);
     toolBar->addWidget(toolbar[RESET]);
@@ -87,25 +88,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     toolBarDebug->addWidget(toolbar[CONTINUE]);
     toolBarDebug->addWidget(toolbar[SKIP_ALL]);
+    toolBarDebug->addWidget(skipAllBox);
 
     toolBarComm->addWidget(toolbar[CRCM]);
     toolBarComm->addWidget(toolbar[ADD_00]);
     toolBarComm->addWidget(toolbar[GET_DATA]);
     toolBarComm->addWidget(toolbar[SPI_CHECK]);
 
-    QWidget *w = new QWidget(this->toolBarMid);
-    QHBoxLayout *hbox = new QHBoxLayout(w);
-    this->skipAllBox = new QCheckBox(tr("Skip all"));
-    hbox->addSpacing(20);
-    hbox->addWidget(skipAllBox);
-    skipAllBox->setVisible(false);
-    hbox->addSpacing(20);
-
-    w->setLayout(hbox);
-    toolBarMid->addWidget(w);
-
     this->addToolBar(toolBar);
-    this->addToolBar(toolBarMid);
 
     QLabel *st = new QLabel(tr(""));
     st->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -187,7 +177,7 @@ void MainWindow::setup_toolbar_buttons(int index)
     this->removeToolBar(toolBarDebug);
     this->removeToolBar(toolBarComm);
     this->removeToolBar(toolBarEmpty);
-    skipAllBox->setVisible(false);
+
     switch (index) {
     /* programming */
     case 0:
@@ -196,7 +186,6 @@ void MainWindow::setup_toolbar_buttons(int index)
         break;
     /* debugging */
     case 1:
-        skipAllBox->setVisible(true);
         this->addToolBar(toolBarDebug);
         toolBarDebug->show();
         break;
