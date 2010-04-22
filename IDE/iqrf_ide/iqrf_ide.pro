@@ -25,4 +25,5 @@ FORMS += mainwindow.ui \
     dialog_usb_info.ui
 TRANSLATIONS += lang_en.ts \
     lang_cz.ts
-RESOURCES += languages.qrc
+RESOURCES += languages.qrc \
+    images.qrc

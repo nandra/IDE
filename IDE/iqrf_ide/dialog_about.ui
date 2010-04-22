@@ -70,7 +70,10 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Picture</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="images.qrc">:/images/images/iqrf_logo.gif</pixmap>
           </property>
          </widget>
         </item>
@@ -214,6 +217,8 @@ www.iqrf.org.com
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

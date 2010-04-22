@@ -120,6 +120,12 @@ MainWindow::MainWindow(QWidget *parent)
     box->setChecked(true);
     ui->statusBar->addPermanentWidget(box);
 
+    QFrame *frame = new QFrame(parent);
+    frame->setFrameShape(QFrame::WinPanel);
+    frame->setFrameShadow(QFrame::Sunken);
+
+    ui->statusBar->addWidget(frame);
+
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
 
@@ -218,13 +224,13 @@ void MainWindow::on_actionAbout_2_triggered()
 /* open homepage */
 void MainWindow::on_actionIQRF_Home_page_triggered()
 {
-    QDesktopServices::openUrl(QUrl::fromEncoded("http://www.microrisc.com"));
+    QDesktopServices::openUrl(QUrl::fromEncoded("http://www.iqrf.org"));
 }
 
 /* open support homepage */
 void MainWindow::on_actionIQRF_Support_triggered()
 {
-    QDesktopServices::openUrl(QUrl::fromEncoded("http://www.iqrf.com/weben/index.php?sekce=support"));
+    QDesktopServices::openUrl(QUrl::fromEncoded("http://www.iq-esupport.com"));
 }
 
 void MainWindow::on_actionCompiler_triggered()
