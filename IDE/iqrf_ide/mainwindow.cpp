@@ -8,6 +8,7 @@
 #include <QStyle>
 #include <QPushButton>
 #include <QProgressBar>
+#include <QCheckBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -56,6 +57,9 @@ MainWindow::MainWindow(QWidget *parent)
     toolBarEmpty->setStyleSheet("QToolBar {background-color: qlineargradient(spread:pad, x1:1, y1:1, "\
                             "x2:1, y2:0, stop:0 rgba(93, 153, 206, 255), stop:1 rgba(255, 255, 255, 255));}");
 
+    toolBarMid = new QToolBar(parent);
+    toolBarMid->setMovable(false);
+
     toolbar.insert(CHECK_USB, create_toolbar_button(tr("Check USB Device")));
     toolbar.insert(RESET, create_toolbar_button(tr("Reset TR Module")));
     toolbar.insert(EDIT, create_toolbar_button(tr("Edit")));
@@ -63,7 +67,7 @@ MainWindow::MainWindow(QWidget *parent)
     toolbar.insert(UPLOAD, create_toolbar_button(tr("Upload"), true));
     toolbar.insert(RF_UPLOAD, create_toolbar_button(tr("RF Upload"), true));
     toolbar.insert(CONTINUE, create_toolbar_button(tr("Continue"), true));
-    toolbar.insert(SKIP_ALL, create_toolbar_button(tr("Skip All")));
+    toolbar.insert(SKIP_ALL, create_toolbar_button(tr("Clear All")));
     toolbar.insert(CRCM, create_toolbar_button(tr("CRCM")));
     toolbar.insert(ADD_00, create_toolbar_button(tr("Add.00.")));
     toolbar.insert(GET_DATA, create_toolbar_button(tr("Get Data")));
@@ -75,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
     toolBar->addWidget(toolbar[CHECK_USB]);
     toolBar->addWidget(toolbar[RESET]);
     toolBar->addWidget(toolbar[EDIT]);
+
 
     toolBarProg->addWidget(toolbar[COMPILE]);
     toolBarProg->addWidget(toolbar[UPLOAD]);
@@ -88,7 +93,20 @@ MainWindow::MainWindow(QWidget *parent)
     toolBarComm->addWidget(toolbar[GET_DATA]);
     toolBarComm->addWidget(toolbar[SPI_CHECK]);
 
+    QWidget *w = new QWidget(this->toolBarMid);
+    QHBoxLayout *hbox = new QHBoxLayout(w);
+    this->skipAllBox = new QCheckBox(tr("Skip all"));
+    hbox->addSpacing(20);
+    hbox->addWidget(skipAllBox);
+    skipAllBox->setVisible(false);
+    hbox->addSpacing(20);
+
+    w->setLayout(hbox);
+    toolBarMid->addWidget(w);
+
+
     this->addToolBar(toolBar);
+    this->addToolBar(toolBarMid);
 
     QLabel *st = new QLabel(tr(""));
     st->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -107,7 +125,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     ui->statusBar->insertWidget(0, st);
-
     ui->statusBar->insertWidget(1, stText);
     ui->statusBar->insertWidget(2, moduleType);
     ui->statusBar->insertWidget(3, os);
@@ -120,11 +137,6 @@ MainWindow::MainWindow(QWidget *parent)
     box->setChecked(true);
     ui->statusBar->addPermanentWidget(box);
 
-    QFrame *frame = new QFrame(parent);
-    frame->setFrameShape(QFrame::WinPanel);
-    frame->setFrameShadow(QFrame::Sunken);
-
-    ui->statusBar->addWidget(frame);
 
     /* setup tab widgets buttons */
     setup_toolbar_buttons(ui->tabWidget->currentIndex());
@@ -172,7 +184,7 @@ void MainWindow::setup_toolbar_buttons(int index)
     this->removeToolBar(toolBarDebug);
     this->removeToolBar(toolBarComm);
     this->removeToolBar(toolBarEmpty);
-
+    skipAllBox->setVisible(false);
     switch (index) {
     /* programming */
     case 0:
@@ -181,6 +193,7 @@ void MainWindow::setup_toolbar_buttons(int index)
         break;
     /* debugging */
     case 1:
+        skipAllBox->setVisible(true);
         this->addToolBar(toolBarDebug);
         toolBarDebug->show();
         break;
@@ -195,6 +208,8 @@ void MainWindow::setup_toolbar_buttons(int index)
         toolBarComm->show();
         break;
     }
+    /* add permanent toolbars */
+
 }
 
 QPushButton *MainWindow::create_toolbar_button(const QString &name, bool disabled)

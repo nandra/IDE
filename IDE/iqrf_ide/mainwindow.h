@@ -11,6 +11,8 @@
 #include "style.h"
 #include <QList>
 #include <QToolBar>
+#include <QCheckBox>
+#include <QLabel>
 
 enum toolbarBtns{
     CHECK_USB,
@@ -53,7 +55,9 @@ private:
     DialogUsbInfo *usbInfo;
     QTranslator *translator;
     QList<QPushButton *> toolbar;
-    QToolBar *toolBar, *toolBarProg, *toolBarDebug, *toolBarComm, *toolBarEmpty;
+    QToolBar *toolBar, *toolBarProg, *toolBarDebug, *toolBarComm, *toolBarEmpty, *toolBarMid;
+    QLabel *btnEmpty;
+    QCheckBox *skipAllBox;
 
 private slots:
     void on_modeBox_activated(int index);
