@@ -102,7 +102,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QLabel *stText = new QLabel(tr("This is module status text"));
     stText->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-    stText->setMinimumWidth(300);
+    //sstText->setMinimumWidth(300);
 
     QLabel *moduleType = new QLabel(tr("TR-52B"));
     moduleType->setFrameStyle(QFrame::Panel | QFrame::Sunken);
