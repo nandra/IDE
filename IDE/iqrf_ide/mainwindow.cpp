@@ -161,11 +161,20 @@ MainWindow::MainWindow(QWidget *parent)
 
     /* resize content of table */
     ui->tableWidget_6->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+
+    /* watch tab handling */
+    watch = new QMenu();
+    watch->addAction("Add watch tab", this, SLOT(add_new_watch_tab()));
+    ui->tabWidget_3->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui->tabWidget_3, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(right_click(const QPoint &)));
+    connect(ui->tabWidget_3, SIGNAL(tabCloseRequested(int)), this, SLOT(close_tab(int)));
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete watch;
 }
 
 void MainWindow::changeEvent(QEvent *event)
@@ -295,4 +304,20 @@ void MainWindow::on_modeBox_activated(int index)
 
     if (index == 1)
         setup_toolbar_buttons(ui->tabWidget->count() + index);
+}
+
+void MainWindow::right_click(const QPoint &p)
+{
+    watch->popup(QWidget::mapToGlobal(p));
+}
+
+void MainWindow::add_new_watch_tab(void)
+{
+    QWidget *tab = new QWidget();
+    ui->tabWidget_3->addTab(tab, "Watch"+QString::number(ui->tabWidget_3->count()));
+}
+
+void MainWindow::close_tab(int tab)
+{
+    ui->tabWidget_3->removeTab(tab);
 }

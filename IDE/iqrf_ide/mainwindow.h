@@ -58,6 +58,7 @@ private:
     QToolBar *toolBar, *toolBarProg, *toolBarDebug, *toolBarComm, *toolBarEmpty, *toolBarMid;
     QLabel *btnEmpty;
     QCheckBox *skipAllBox;
+    QMenu *watch;
 
 private slots:
     void on_modeBox_activated(int index);
@@ -71,6 +72,9 @@ private slots:
     void on_actionAbout_2_triggered();
     void on_actionShow_IQRF_USB_Device_info_triggered();
     void lang_change(void);
+    void right_click(const QPoint &p);
+    void add_new_watch_tab(void);
+    void close_tab(int tab);
 };
 
 #endif // MAINWINDOW_H
