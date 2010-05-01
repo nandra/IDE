@@ -158,6 +158,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->checkBox22->setDisabled(true);
     ui->checkBox31->setDisabled(true);
     ui->checkBox32->setDisabled(true);
+
+    /* resize content of table */
+    ui->tableWidget_6->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
 }
 
 MainWindow::~MainWindow()
