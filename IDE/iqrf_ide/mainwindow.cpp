@@ -75,7 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* style setup for mainwindow */
-    this->skipAllBox = new QCheckBox(tr("Skip all"));
+    this->skipAllBox = new QCheckBox(tr("Skip all debugs"));
 
     toolBar->addWidget(toolbar[CHECK_USB]);
     toolBar->addWidget(toolbar[RESET]);
@@ -102,7 +102,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QLabel *stText = new QLabel(tr("This is module status text"));
     stText->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-    //sstText->setMinimumWidth(300);
+    stText->setMinimumWidth(250);
 
     QLabel *moduleType = new QLabel(tr("TR-52B"));
     moduleType->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -120,15 +120,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusBar->insertWidget(3, os);
     ui->statusBar->insertWidget(4, id);
 
+    //QSpacerItem *statusBarSpacer = new QSpacerItem(100, 5, QSizePolicy::Fixed);
+    //ui->statusBar->insertWidget(5, statusBarSpacer);
+
     QProgressBar *bar = new QProgressBar(parent);
     bar->setMaximumHeight(10);
     bar->setMaximumWidth(100);
-    ui->statusBar->addPermanentWidget(bar);
+    ui->statusBar->insertWidget(6, bar);
 
 
     QCheckBox *box = new QCheckBox(tr("Check mode"));
     box->setChecked(true);
-    ui->statusBar->addPermanentWidget(box);
+    ui->statusBar->insertWidget(7, box);
 
 
     /* setup tab widgets buttons */

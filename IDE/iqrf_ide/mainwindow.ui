@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>788</width>
+    <width>820</width>
     <height>512</height>
    </rect>
   </property>
@@ -15,6 +15,12 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>300</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>IQRF IDE v3.00d</string>
@@ -45,6 +51,9 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_2">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
             <item row="0" column="0">
              <spacer name="horizontalSpacer_3">
               <property name="orientation">
@@ -103,7 +112,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>5</width>
+                <width>2</width>
                 <height>0</height>
                </size>
               </property>
@@ -119,7 +128,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>5</width>
+                <width>3</width>
                 <height>0</height>
                </size>
               </property>
@@ -210,7 +219,7 @@
                </size>
               </property>
               <property name="text">
-               <string>Open (*.c)</string>
+               <string>Open (.c)</string>
               </property>
              </widget>
             </item>
@@ -221,6 +230,12 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>C:...This is very long path to the C FileE01-TX.c</string>
@@ -297,6 +312,12 @@
                 <width>300</width>
                 <height>0</height>
                </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>This is very long text for new opened file</string>
@@ -403,6 +424,12 @@
                 <height>0</height>
                </size>
               </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>This is very long text for new opened file</string>
               </property>
@@ -447,6 +474,12 @@
             </item>
             <item row="6" column="4">
              <widget class="QCheckBox" name="checkBox2">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -461,6 +494,12 @@
             </item>
             <item row="7" column="4">
              <widget class="QCheckBox" name="checkBox3">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -511,6 +550,9 @@
                </property>
                <item row="0" column="0" colspan="2">
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetFixedSize</enum>
+                 </property>
                  <item>
                   <widget class="QPushButton" name="remodModuleInfoBtn">
                    <property name="sizePolicy">
@@ -685,7 +727,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
-           <number>0</number>
+           <number>5</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <property name="sizePolicy">
@@ -724,6 +766,9 @@
                 <property name="showGrid">
                  <bool>true</bool>
                 </property>
+                <property name="gridStyle">
+                 <enum>Qt::DotLine</enum>
+                </property>
                 <property name="rowCount">
                  <number>3</number>
                 </property>
@@ -738,18 +783,6 @@
                 </attribute>
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>20</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>20</number>
-                </attribute>
-                <attribute name="horizontalHeaderStretchLastSection">
-                 <bool>true</bool>
-                </attribute>
-                <attribute name="horizontalHeaderCascadingSectionResizes">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>30</number>
                 </attribute>
                 <row>
                  <property name="text">
@@ -875,6 +908,9 @@
                 <property name="showGrid">
                  <bool>true</bool>
                 </property>
+                <property name="gridStyle">
+                 <enum>Qt::DotLine</enum>
+                </property>
                 <property name="rowCount">
                  <number>3</number>
                 </property>
@@ -889,18 +925,6 @@
                 </attribute>
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>20</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>20</number>
-                </attribute>
-                <attribute name="horizontalHeaderStretchLastSection">
-                 <bool>true</bool>
-                </attribute>
-                <attribute name="horizontalHeaderCascadingSectionResizes">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>30</number>
                 </attribute>
                 <row>
                  <property name="text">
@@ -1026,6 +1050,9 @@
                 <property name="showGrid">
                  <bool>true</bool>
                 </property>
+                <property name="gridStyle">
+                 <enum>Qt::DotLine</enum>
+                </property>
                 <property name="rowCount">
                  <number>3</number>
                 </property>
@@ -1040,18 +1067,6 @@
                 </attribute>
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>20</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>20</number>
-                </attribute>
-                <attribute name="horizontalHeaderStretchLastSection">
-                 <bool>true</bool>
-                </attribute>
-                <attribute name="horizontalHeaderCascadingSectionResizes">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>30</number>
                 </attribute>
                 <row>
                  <property name="text">
@@ -1207,6 +1222,9 @@
                 <height>235</height>
                </size>
               </property>
+              <property name="gridStyle">
+               <enum>Qt::DotLine</enum>
+              </property>
               <attribute name="horizontalHeaderDefaultSectionSize">
                <number>30</number>
               </attribute>
@@ -1215,15 +1233,6 @@
               </attribute>
               <attribute name="verticalHeaderDefaultSectionSize">
                <number>20</number>
-              </attribute>
-              <attribute name="verticalHeaderDefaultSectionSize">
-               <number>20</number>
-              </attribute>
-              <attribute name="horizontalHeaderStretchLastSection">
-               <bool>true</bool>
-              </attribute>
-              <attribute name="horizontalHeaderDefaultSectionSize">
-               <number>30</number>
               </attribute>
               <row>
                <property name="text">
@@ -1413,15 +1422,6 @@
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>20</number>
                 </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>20</number>
-                </attribute>
-                <attribute name="horizontalHeaderStretchLastSection">
-                 <bool>true</bool>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>30</number>
-                </attribute>
                 <row>
                  <property name="text">
                   <string>A0</string>
@@ -1470,6 +1470,9 @@
                 <height>0</height>
                </size>
               </property>
+              <property name="gridStyle">
+               <enum>Qt::DotLine</enum>
+              </property>
               <attribute name="horizontalHeaderDefaultSectionSize">
                <number>30</number>
               </attribute>
@@ -1478,15 +1481,6 @@
               </attribute>
               <attribute name="verticalHeaderDefaultSectionSize">
                <number>20</number>
-              </attribute>
-              <attribute name="verticalHeaderDefaultSectionSize">
-               <number>20</number>
-              </attribute>
-              <attribute name="horizontalHeaderStretchLastSection">
-               <bool>true</bool>
-              </attribute>
-              <attribute name="horizontalHeaderDefaultSectionSize">
-               <number>30</number>
               </attribute>
               <row>
                <property name="text">
@@ -1610,15 +1604,21 @@
               <item>
                <widget class="QTableWidget" name="tableWidget_6">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>0</width>
-                  <height>0</height>
+                  <width>315</width>
+                  <height>70</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <property name="verticalScrollBarPolicy">
@@ -1633,6 +1633,9 @@
                 <property name="textElideMode">
                  <enum>Qt::ElideRight</enum>
                 </property>
+                <property name="gridStyle">
+                 <enum>Qt::DotLine</enum>
+                </property>
                 <attribute name="horizontalHeaderCascadingSectionResizes">
                  <bool>false</bool>
                 </attribute>
@@ -1647,21 +1650,6 @@
                 </attribute>
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>20</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>20</number>
-                </attribute>
-                <attribute name="horizontalHeaderStretchLastSection">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderCascadingSectionResizes">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>70</number>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>70</number>
                 </attribute>
                 <row>
                  <property name="text">
@@ -1728,7 +1716,7 @@
               <property name="sizeHint" stdset="0">
                <size>
                 <width>707</width>
-                <height>136</height>
+                <height>300</height>
                </size>
               </property>
              </spacer>
@@ -1841,9 +1829,21 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <attribute name="headerDefaultSectionSize">
-                 <number>70</number>
-                </attribute>
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
                 <attribute name="headerDefaultSectionSize">
                  <number>70</number>
                 </attribute>
@@ -1992,11 +1992,11 @@
                  <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
+                 <enum>QSizePolicy::Expanding</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>328</width>
+                  <width>0</width>
                   <height>20</height>
                  </size>
                 </property>
@@ -2010,12 +2010,12 @@
                <enum>Qt::Vertical</enum>
               </property>
               <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
+               <enum>QSizePolicy::Expanding</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>100</height>
+                <height>0</height>
                </size>
               </property>
              </spacer>
@@ -2037,9 +2037,15 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <attribute name="headerDefaultSectionSize">
-                 <number>70</number>
-                </attribute>
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
                 <attribute name="headerDefaultSectionSize">
                  <number>70</number>
                 </attribute>
@@ -2188,11 +2194,11 @@
                  <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
+                 <enum>QSizePolicy::Expanding</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>328</width>
+                  <width>0</width>
                   <height>20</height>
                  </size>
                 </property>
@@ -2206,12 +2212,12 @@
                <enum>Qt::Vertical</enum>
               </property>
               <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
+               <enum>QSizePolicy::Expanding</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>100</height>
+                <height>0</height>
                </size>
               </property>
              </spacer>
@@ -2231,6 +2237,9 @@
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout_5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetFixedSize</enum>
+            </property>
             <item row="0" column="0">
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
@@ -2268,22 +2277,6 @@
                </layout>
               </item>
               <item>
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>5</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
                <widget class="QGroupBox" name="macrosBox">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -2295,13 +2288,19 @@
                  <string>Macros</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetFixedSize</enum>
+                 </property>
+                 <property name="leftMargin">
+                  <number>9</number>
+                 </property>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <item>
                     <widget class="QToolButton" name="m1Btn">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>37</width>
                        <height>0</height>
                       </size>
                      </property>
@@ -2312,6 +2311,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m15Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M2</string>
                      </property>
@@ -2319,6 +2324,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m14Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M3</string>
                      </property>
@@ -2326,6 +2337,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m13Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M4</string>
                      </property>
@@ -2333,6 +2350,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m12Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M5</string>
                      </property>
@@ -2340,6 +2363,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m11Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M6</string>
                      </property>
@@ -2347,6 +2376,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m10Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M7</string>
                      </property>
@@ -2354,6 +2389,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m9Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M8</string>
                      </property>
@@ -2361,6 +2402,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m8Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M9</string>
                      </property>
@@ -2368,6 +2415,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m7Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M10</string>
                      </property>
@@ -2375,6 +2428,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m6Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M11</string>
                      </property>
@@ -2382,6 +2441,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m5Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M12</string>
                      </property>
@@ -2389,6 +2454,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m4Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M13</string>
                      </property>
@@ -2396,6 +2467,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m3Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M14</string>
                      </property>
@@ -2403,6 +2480,12 @@
                    </item>
                    <item>
                     <widget class="QToolButton" name="m2Btn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>37</width>
+                       <height>0</height>
+                      </size>
+                     </property>
                      <property name="text">
                       <string>M15</string>
                      </property>
@@ -2446,6 +2529,22 @@
                  <string>Send</string>
                 </property>
                </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
               <item>
                <widget class="QCheckBox" name="checkBox">
@@ -2589,7 +2688,7 @@
             <property name="sizeHint" stdset="0">
              <size>
               <width>730</width>
-              <height>20</height>
+              <height>0</height>
              </size>
             </property>
            </spacer>
@@ -2607,8 +2706,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>788</width>
-     <height>20</height>
+     <width>820</width>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSetings">
