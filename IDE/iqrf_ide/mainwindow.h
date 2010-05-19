@@ -74,7 +74,7 @@ private slots:
     void lang_change(void);
     void right_click(const QPoint &p);
     void add_new_watch_tab(void);
-    void close_tab(int tab);
+    void close_tab(void);
 };
 
 #endif // MAINWINDOW_H

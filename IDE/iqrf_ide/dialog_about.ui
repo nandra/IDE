@@ -28,6 +28,10 @@
   <property name="windowTitle">
    <string>About</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/images/lupa.ico</normaloff>:/images/images/lupa.ico</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QFrame" name="frame">
@@ -166,12 +170,12 @@
         <property name="text">
          <string>
 MICRORISC s.r.o.
-Delnicka 222, Jicin 50601, Czech Republic
+Delnicka 222, Jicin 50601, Czech Republic, EU
 
 www.microrisc.com
 www.iqrf.org.com
 
-         © 2004-2010 Microrisc s.r.o.</string>
+                © 2004-2010 Microrisc s.r.o.</string>
         </property>
        </widget>
       </item>

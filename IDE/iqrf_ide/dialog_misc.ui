@@ -22,6 +22,10 @@
   <property name="windowTitle">
    <string>Tool Settings</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/images/lupa.ico</normaloff>:/images/images/lupa.ico</iconset>
+  </property>
   <widget class="QGroupBox" name="groupBox_7">
    <property name="geometry">
     <rect>
@@ -115,7 +119,7 @@
    <property name="title">
     <string>Default Workspace</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -164,6 +168,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

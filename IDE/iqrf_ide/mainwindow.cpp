@@ -126,12 +126,12 @@ MainWindow::MainWindow(QWidget *parent)
     QProgressBar *bar = new QProgressBar(parent);
     bar->setMaximumHeight(10);
     bar->setMaximumWidth(100);
-    ui->statusBar->insertWidget(6, bar);
+    ui->statusBar->insertWidget(5, bar);
 
 
     QCheckBox *box = new QCheckBox(tr("Check mode"));
     box->setChecked(true);
-    ui->statusBar->insertWidget(7, box);
+    ui->statusBar->insertWidget(6, box);
 
 
     /* setup tab widgets buttons */
@@ -168,9 +168,10 @@ MainWindow::MainWindow(QWidget *parent)
     /* watch tab handling */
     watch = new QMenu();
     watch->addAction("Add watch tab", this, SLOT(add_new_watch_tab()));
+    watch->addAction("Remove watch tab", this, SLOT(close_tab()));
     ui->tabWidget_3->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->tabWidget_3, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(right_click(const QPoint &)));
-    connect(ui->tabWidget_3, SIGNAL(tabCloseRequested(int)), this, SLOT(close_tab(int)));
+    //connect(ui->tabWidget_3, SIGNAL(tabCloseRequested(int)), this, SLOT(close_tab(int)));
 
 }
 
@@ -308,10 +309,18 @@ void MainWindow::on_modeBox_activated(int index)
      * to show raw terminal buttons in toolbar
      */
 
-    if (index == 1)
+    if (index == 1) {
         setup_toolbar_buttons(ui->tabWidget->count() + index);
-    else
+        /* disable some widgets */
+        ui->checkBox_2->setVisible(false);
+        ui->checkBox_3->setVisible(false);
+        ui->checkBox_4->setVisible(false);
+    } else {
         setup_toolbar_buttons(ui->tabWidget->count() +2);
+        ui->checkBox_2->setVisible(true);
+        ui->checkBox_3->setVisible(true);
+        ui->checkBox_4->setVisible(true);
+    }
 }
 
 void MainWindow::right_click(const QPoint &p)
@@ -325,7 +334,9 @@ void MainWindow::add_new_watch_tab(void)
     ui->tabWidget_3->addTab(tab, "Watch"+QString::number(ui->tabWidget_3->count()));
 }
 
-void MainWindow::close_tab(int tab)
+void MainWindow::close_tab(void)
 {
-    ui->tabWidget_3->removeTab(tab);
+    int act_index = ui->tabWidget_3->currentIndex();
+    if (act_index)
+        ui->tabWidget_3->removeTab(ui->tabWidget_3->currentIndex());
 }
