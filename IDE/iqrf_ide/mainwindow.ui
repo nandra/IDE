@@ -52,7 +52,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -754,7 +754,7 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
-           <number>4</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <property name="sizePolicy">
@@ -941,7 +941,7 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>16</y>
+              <y>11</y>
               <width>58</width>
               <height>16</height>
              </rect>
@@ -954,7 +954,7 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>35</y>
+              <y>30</y>
               <width>708</width>
               <height>83</height>
              </rect>
@@ -1273,6 +1273,19 @@
              </property>
             </column>
            </widget>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="geometry">
+             <rect>
+              <x>580</x>
+              <y>0</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Decimal</string>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="tab_4">
            <attribute name="title">
@@ -1281,8 +1294,8 @@
            <widget class="QTableWidget" name="tableWidget_4">
             <property name="geometry">
              <rect>
-              <x>9</x>
-              <y>9</y>
+              <x>10</x>
+              <y>30</y>
               <width>708</width>
               <height>223</height>
              </rect>
@@ -1462,8 +1475,8 @@
            <widget class="QLabel" name="label_6">
             <property name="geometry">
              <rect>
-              <x>10</x>
-              <y>245</y>
+              <x>11</x>
+              <y>266</y>
               <width>75</width>
               <height>16</height>
              </rect>
@@ -1475,8 +1488,8 @@
            <widget class="QTableWidget" name="tableWidget_5">
             <property name="geometry">
              <rect>
-              <x>10</x>
-              <y>264</y>
+              <x>11</x>
+              <y>285</y>
               <width>708</width>
               <height>42</height>
              </rect>
@@ -1625,6 +1638,19 @@
              </property>
             </column>
            </widget>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="geometry">
+             <rect>
+              <x>580</x>
+              <y>0</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Decimal</string>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="tab_5">
            <attribute name="title">
@@ -1634,8 +1660,8 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>10</y>
-              <width>600</width>
+              <y>30</y>
+              <width>708</width>
               <height>145</height>
              </rect>
             </property>
@@ -1795,9 +1821,9 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>160</y>
+              <y>220</y>
               <width>310</width>
-              <height>62</height>
+              <height>111</height>
              </rect>
             </property>
             <property name="sizePolicy">
@@ -1906,6 +1932,19 @@
               <string>userReg1</string>
              </property>
             </item>
+           </widget>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="geometry">
+             <rect>
+              <x>580</x>
+              <y>0</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Decimal</string>
+            </property>
            </widget>
           </widget>
           <widget class="QWidget" name="tab_6">
@@ -2341,12 +2380,25 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>8</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
                  <widget class="QLabel" name="modeLbl">
                   <property name="layoutDirection">
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="text">
-                   <string>Mode                </string>
+                   <string> Mode                </string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
