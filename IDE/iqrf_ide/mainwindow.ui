@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>752</width>
+    <width>794</width>
     <height>500</height>
    </rect>
   </property>
@@ -52,7 +52,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -861,18 +861,6 @@ p, li { white-space: pre-wrap; }
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
             </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderCascadingSectionResizes">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
-            </attribute>
             <row>
              <property name="text">
               <string>0</string>
@@ -1032,18 +1020,6 @@ p, li { white-space: pre-wrap; }
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
             </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderCascadingSectionResizes">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
-            </attribute>
             <row>
              <property name="text">
               <string>0</string>
@@ -1196,18 +1172,6 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
-            </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderCascadingSectionResizes">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
             </attribute>
             <row>
              <property name="text">
@@ -1368,15 +1332,6 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
-            </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
             </attribute>
             <row>
              <property name="text">
@@ -1572,18 +1527,6 @@ p, li { white-space: pre-wrap; }
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
             </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderVisible">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
-            </attribute>
             <row>
              <property name="text">
               <string>A0</string>
@@ -1733,15 +1676,6 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
-            </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>30</number>
             </attribute>
             <row>
              <property name="text">
@@ -1919,21 +1853,6 @@ p, li { white-space: pre-wrap; }
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>20</number>
             </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>20</number>
-            </attribute>
-            <attribute name="horizontalHeaderStretchLastSection">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderCascadingSectionResizes">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="horizontalHeaderMinimumSectionSize">
-             <number>70</number>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>70</number>
-            </attribute>
             <row>
              <property name="text">
               <string>070</string>
@@ -2049,15 +1968,6 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>22</number>
-            </attribute>
-            <attribute name="verticalHeaderVisible">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>22</number>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>50</number>
             </attribute>
             <row>
              <property name="text">
@@ -2323,15 +2233,6 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <attribute name="verticalHeaderDefaultSectionSize">
              <number>22</number>
-            </attribute>
-            <attribute name="verticalHeaderVisible">
-             <bool>false</bool>
-            </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>22</number>
-            </attribute>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>50</number>
             </attribute>
             <row>
              <property name="text">
@@ -2694,6 +2595,9 @@ p, li { white-space: pre-wrap; }
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Macro 1</string>
+                     </property>
                      <property name="text">
                       <string>M1</string>
                      </property>
@@ -2706,6 +2610,9 @@ p, li { white-space: pre-wrap; }
                        <width>37</width>
                        <height>0</height>
                       </size>
+                     </property>
+                     <property name="toolTip">
+                      <string>Macro 2</string>
                      </property>
                      <property name="text">
                       <string>M2</string>
@@ -2720,6 +2627,9 @@ p, li { white-space: pre-wrap; }
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Macro 3</string>
+                     </property>
                      <property name="text">
                       <string>M3</string>
                      </property>
@@ -2732,6 +2642,9 @@ p, li { white-space: pre-wrap; }
                        <width>37</width>
                        <height>0</height>
                       </size>
+                     </property>
+                     <property name="toolTip">
+                      <string>Macro 4</string>
                      </property>
                      <property name="text">
                       <string>M4</string>
@@ -2746,6 +2659,9 @@ p, li { white-space: pre-wrap; }
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Macro 5</string>
+                     </property>
                      <property name="text">
                       <string>M5</string>
                      </property>
@@ -2758,6 +2674,9 @@ p, li { white-space: pre-wrap; }
                        <width>37</width>
                        <height>0</height>
                       </size>
+                     </property>
+                     <property name="toolTip">
+                      <string>Macro 6</string>
                      </property>
                      <property name="text">
                       <string>M6</string>
@@ -3099,8 +3018,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>752</width>
-     <height>20</height>
+     <width>794</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSetings">
