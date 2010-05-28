@@ -9,6 +9,8 @@
 #include <QPushButton>
 #include <QProgressBar>
 #include <QCheckBox>
+#include <QAction>
+#include <QSpacerItem>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -75,7 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* style setup for mainwindow */
-    this->skipAllBox = new QCheckBox(tr("Skip all debugs"));
+    this->skipAllBox = new QCheckBox(tr("Skip All Debugs"));
 
     toolBar->addWidget(toolbar[CHECK_USB]);
     toolBar->addWidget(toolbar[RESET]);
@@ -120,18 +122,27 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusBar->insertWidget(3, os);
     ui->statusBar->insertWidget(4, id);
 
-    //QSpacerItem *statusBarSpacer = new QSpacerItem(100, 5, QSizePolicy::Fixed);
-    //ui->statusBar->insertWidget(5, statusBarSpacer);
+    /* frame for status bar */
+    QFrame *status_frame = new QFrame();
+    status_frame->setFrameStyle(QFrame::Panel | QFrame::Sunken);
 
-    QProgressBar *bar = new QProgressBar(parent);
+    QHBoxLayout *layout = new QHBoxLayout(status_frame);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSizeConstraint(QLayout::SetFixedSize);
+
+    QProgressBar *bar = new QProgressBar(status_frame);
     bar->setMaximumHeight(10);
     bar->setMaximumWidth(100);
-    ui->statusBar->insertWidget(5, bar);
 
-
-    QCheckBox *box = new QCheckBox(tr("Check mode"));
+    QCheckBox *box = new QCheckBox(tr("Check Mode"), status_frame);
     box->setChecked(true);
-    ui->statusBar->insertWidget(6, box);
+
+    layout->addSpacing(30);
+    layout->addWidget(bar);
+    layout->addWidget(box);
+    layout->addSpacing(30);
+
+    ui->statusBar->insertWidget(5, status_frame);
 
 
     /* setup tab widgets buttons */
@@ -167,11 +178,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     /* watch tab handling */
     watch = new QMenu();
-    watch->addAction("Add watch tab", this, SLOT(add_new_watch_tab()));
-    watch->addAction("Remove watch tab", this, SLOT(close_tab()));
+
+
+    act.insert(0, watch->addAction(tr("Add watch tab"), this, SLOT(add_new_watch_tab())));
+    act.insert(1, watch->addAction(tr("Remove watch tab"), this, SLOT(close_tab())));
     ui->tabWidget_3->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->tabWidget_3, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(right_click(const QPoint &)));
-    //connect(ui->tabWidget_3, SIGNAL(tabCloseRequested(int)), this, SLOT(close_tab(int)));
+
+    ui->tableWidget_8->setColumnWidth(1, 70);
+    ui->tableWidget_9->setColumnWidth(1, 70);
 
 }
 
@@ -325,6 +340,12 @@ void MainWindow::on_modeBox_activated(int index)
 
 void MainWindow::right_click(const QPoint &p)
 {
+    /* for all debug disable viewing remove */
+    if (ui->tabWidget_3->currentIndex() == 0) {
+        act[1]->setEnabled(false);
+    } else {
+        act[1]->setEnabled(true);
+    }
     watch->popup(QWidget::mapToGlobal(p));
 }
 

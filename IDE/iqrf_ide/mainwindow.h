@@ -55,6 +55,7 @@ private:
     DialogUsbInfo *usbInfo;
     QTranslator *translator;
     QList<QPushButton *> toolbar;
+    QList <QAction*> act;
     QToolBar *toolBar, *toolBarProg, *toolBarDebug, *toolBarComm, *toolBarEmpty, *toolBarMid;
     QLabel *btnEmpty;
     QCheckBox *skipAllBox;

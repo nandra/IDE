@@ -73,6 +73,9 @@
         </property>
         <item row="0" column="0">
          <layout class="QGridLayout" name="gridLayout_3">
+          <property name="verticalSpacing">
+           <number>4</number>
+          </property>
           <item row="0" column="1">
            <spacer name="horizontalSpacer">
             <property name="orientation">
@@ -175,7 +178,7 @@
            <widget class="QListWidget" name="uploadLogList"/>
           </item>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_2">
+           <layout class="QGridLayout" name="gridLayout_2" rowminimumheight="0,0,0,0,0,0,23,23,23">
             <property name="sizeConstraint">
              <enum>QLayout::SetFixedSize</enum>
             </property>
@@ -358,12 +361,16 @@
               </property>
               <property name="font">
                <font>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
-               <string>C:...This is very long path to the C FileE01-TX.c</string>
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;C:...This is very long path to the C &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;FileE01-TX&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;.c&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -440,8 +447,8 @@
               </property>
               <property name="font">
                <font>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -551,8 +558,8 @@
               </property>
               <property name="font">
                <font>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -592,19 +599,6 @@
             </item>
             <item row="6" column="3">
              <widget class="QRadioButton" name="radioButton2">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="4">
-             <widget class="QCheckBox" name="checkBox2">
-              <property name="font">
-               <font>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
               <property name="text">
                <string/>
               </property>
@@ -674,11 +668,11 @@
                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
                </property>
                <item row="0" column="0" colspan="2">
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <layout class="QGridLayout" name="gridLayout">
                  <property name="sizeConstraint">
                   <enum>QLayout::SetFixedSize</enum>
                  </property>
-                 <item>
+                 <item row="0" column="0">
                   <widget class="QPushButton" name="remodModuleInfoBtn">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -697,35 +691,51 @@
                    </property>
                   </widget>
                  </item>
-                 <item>
+                 <item row="0" column="1">
+                  <spacer name="horizontalSpacer_10">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Minimum</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>25</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="0" column="2">
                   <widget class="QLabel" name="coordinatorLbl">
                    <property name="text">
                     <string>Coordinator</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
+                 <item row="0" column="3">
                   <widget class="QLabel" name="idprogLbl">
                    <property name="text">
                     <string>ID: 1000589</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
+                 <item row="0" column="4">
                   <widget class="QLabel" name="osVerLblb">
                    <property name="text">
                     <string>IQRF OS v2.11 (0878)</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
+                 <item row="0" column="5">
                   <widget class="QLabel" name="mcuLbl">
                    <property name="text">
                     <string>MCU PIC 16F886</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
+                 <item row="0" column="6">
                   <widget class="QToolButton" name="copyModuleInfoBtn">
                    <property name="text">
                     <string>C</string>
@@ -735,6 +745,33 @@
                 </layout>
                </item>
               </layout>
+             </widget>
+            </item>
+            <item row="6" column="4">
+             <widget class="QCheckBox" name="checkBox2">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="6">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="6">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string/>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1112,7 +1149,7 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>231</y>
+              <y>241</y>
               <width>46</width>
               <height>16</height>
              </rect>
@@ -1125,9 +1162,9 @@
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>250</y>
+              <y>260</y>
               <width>708</width>
-              <height>83</height>
+              <height>103</height>
              </rect>
             </property>
             <property name="sizePolicy">
@@ -1146,7 +1183,7 @@
              <enum>Qt::DotLine</enum>
             </property>
             <property name="rowCount">
-             <number>3</number>
+             <number>4</number>
             </property>
             <attribute name="horizontalHeaderCascadingSectionResizes">
              <bool>false</bool>
@@ -1185,6 +1222,11 @@
             <row>
              <property name="text">
               <string>32</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>48</string>
              </property>
             </row>
             <column>
@@ -1952,6 +1994,9 @@
             <string>Watch</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="margin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QTabWidget" name="tabWidget_3">
               <property name="tabPosition">
@@ -1981,48 +2026,109 @@
            <attribute name="title">
             <string>System Info</string>
            </attribute>
-           <widget class="QTreeWidget" name="treeWidget">
+           <widget class="QTableWidget" name="tableWidget_8">
             <property name="geometry">
              <rect>
               <x>10</x>
               <y>10</y>
-              <width>300</width>
-              <height>300</height>
+              <width>281</width>
+              <height>341</height>
              </rect>
             </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+            <property name="showGrid">
+             <bool>true</bool>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>300</width>
-              <height>300</height>
-             </size>
+            <property name="gridStyle">
+             <enum>Qt::DotLine</enum>
             </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="horizontalScrollBarPolicy">
-             <enum>Qt::ScrollBarAlwaysOff</enum>
-            </property>
-            <property name="editTriggers">
-             <set>QAbstractItemView::NoEditTriggers</set>
-            </property>
-            <property name="rootIsDecorated">
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>50</number>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
              <bool>false</bool>
-            </property>
-            <attribute name="headerDefaultSectionSize">
-             <number>60</number>
             </attribute>
-            <attribute name="headerDefaultSectionSize">
-             <number>60</number>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>22</number>
             </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>22</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>50</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
             <column>
              <property name="text">
               <string>Address</string>
@@ -2048,116 +2154,144 @@
               <string>Bin</string>
              </property>
             </column>
-            <item>
+            <item row="0" column="0">
              <property name="text">
               <string>03</string>
              </property>
+            </item>
+            <item row="0" column="1">
              <property name="text">
               <string>STATUS</string>
              </property>
             </item>
-            <item>
+            <item row="1" column="0">
              <property name="text">
               <string>05</string>
              </property>
+            </item>
+            <item row="1" column="1">
              <property name="text">
               <string>PORTA</string>
              </property>
             </item>
-            <item>
+            <item row="2" column="0">
              <property name="text">
               <string>06</string>
              </property>
+            </item>
+            <item row="2" column="1">
              <property name="text">
               <string>PORTB</string>
              </property>
             </item>
-            <item>
+            <item row="3" column="0">
              <property name="text">
               <string>18</string>
              </property>
+            </item>
+            <item row="3" column="1">
              <property name="text">
               <string>RCSTA</string>
              </property>
             </item>
-            <item>
+            <item row="4" column="0">
              <property name="text">
               <string>19</string>
              </property>
+            </item>
+            <item row="4" column="1">
              <property name="text">
               <string>TXREG</string>
              </property>
             </item>
-            <item>
+            <item row="5" column="0">
              <property name="text">
               <string>1A</string>
              </property>
+            </item>
+            <item row="5" column="1">
              <property name="text">
               <string>RCREG</string>
              </property>
             </item>
-            <item>
+            <item row="6" column="0">
              <property name="text">
               <string>1E</string>
              </property>
+            </item>
+            <item row="6" column="1">
              <property name="text">
               <string>ADRESH</string>
              </property>
             </item>
-            <item>
+            <item row="7" column="0">
              <property name="text">
               <string>81</string>
              </property>
+            </item>
+            <item row="7" column="1">
              <property name="text">
               <string>OPTION</string>
              </property>
             </item>
-            <item>
+            <item row="8" column="0">
              <property name="text">
               <string>85</string>
              </property>
+            </item>
+            <item row="8" column="1">
              <property name="text">
               <string>TRISA</string>
              </property>
             </item>
-            <item>
+            <item row="9" column="0">
              <property name="text">
               <string>86</string>
              </property>
+            </item>
+            <item row="9" column="1">
              <property name="text">
               <string>TRISB</string>
              </property>
             </item>
-            <item>
+            <item row="10" column="0">
              <property name="text">
               <string>98</string>
              </property>
+            </item>
+            <item row="10" column="1">
              <property name="text">
               <string>TXSTA</string>
              </property>
             </item>
-            <item>
+            <item row="11" column="0">
              <property name="text">
               <string>99</string>
              </property>
+            </item>
+            <item row="11" column="1">
              <property name="text">
-              <string>SPBGR</string>
+              <string>SPBRG</string>
              </property>
             </item>
-            <item>
+            <item row="12" column="0">
              <property name="text">
               <string>9E</string>
              </property>
+            </item>
+            <item row="12" column="1">
              <property name="text">
               <string>ADRESL</string>
              </property>
             </item>
-            <item>
+            <item row="13" column="0">
              <property name="text">
               <string>105</string>
              </property>
+            </item>
+            <item row="13" column="1">
              <property name="text">
-              <string>WDTCON</string>
+              <string>WTDCON</string>
              </property>
             </item>
            </widget>
@@ -2166,48 +2300,109 @@
            <attribute name="title">
             <string>Networking</string>
            </attribute>
-           <widget class="QTreeWidget" name="treeWidget_2">
+           <widget class="QTableWidget" name="tableWidget_9">
             <property name="geometry">
              <rect>
               <x>10</x>
               <y>10</y>
-              <width>300</width>
-              <height>300</height>
+              <width>281</width>
+              <height>341</height>
              </rect>
             </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+            <property name="showGrid">
+             <bool>true</bool>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>300</width>
-              <height>300</height>
-             </size>
+            <property name="gridStyle">
+             <enum>Qt::DotLine</enum>
             </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="horizontalScrollBarPolicy">
-             <enum>Qt::ScrollBarAlwaysOff</enum>
-            </property>
-            <property name="editTriggers">
-             <set>QAbstractItemView::NoEditTriggers</set>
-            </property>
-            <property name="indentation">
-             <number>20</number>
-            </property>
-            <property name="rootIsDecorated">
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>50</number>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
              <bool>false</bool>
-            </property>
-            <attribute name="headerDefaultSectionSize">
-             <number>60</number>
             </attribute>
-            <attribute name="headerDefaultSectionSize">
-             <number>60</number>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>22</number>
             </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>22</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>50</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
             <column>
              <property name="text">
               <string>Address</string>
@@ -2233,114 +2428,142 @@
               <string>Bin</string>
              </property>
             </column>
-            <item>
+            <item row="0" column="0">
              <property name="text">
               <string>4C</string>
              </property>
+            </item>
+            <item row="0" column="1">
              <property name="text">
               <string>toutRF</string>
              </property>
             </item>
-            <item>
+            <item row="1" column="0">
              <property name="text">
               <string>153</string>
              </property>
+            </item>
+            <item row="1" column="1">
              <property name="text">
               <string>PIN</string>
              </property>
             </item>
-            <item>
+            <item row="2" column="0">
              <property name="text">
               <string>154</string>
              </property>
+            </item>
+            <item row="2" column="1">
              <property name="text">
               <string>DLEN</string>
              </property>
             </item>
-            <item>
+            <item row="3" column="0">
              <property name="text">
               <string>156</string>
              </property>
+            </item>
+            <item row="3" column="1">
              <property name="text">
               <string>RX</string>
              </property>
             </item>
-            <item>
+            <item row="4" column="0">
              <property name="text">
               <string>157</string>
              </property>
+            </item>
+            <item row="4" column="1">
              <property name="text">
               <string>TX</string>
              </property>
             </item>
-            <item>
+            <item row="5" column="0">
              <property name="text">
               <string>15C</string>
              </property>
+            </item>
+            <item row="5" column="1">
              <property name="text">
               <string>RTDEF</string>
              </property>
             </item>
-            <item>
+            <item row="6" column="0">
              <property name="text">
               <string>15D</string>
              </property>
+            </item>
+            <item row="6" column="1">
              <property name="text">
               <string>RTV0</string>
              </property>
             </item>
-            <item>
+            <item row="7" column="0">
              <property name="text">
               <string>15E</string>
              </property>
+            </item>
+            <item row="7" column="1">
              <property name="text">
               <string>RTV1</string>
              </property>
             </item>
-            <item>
+            <item row="8" column="0">
              <property name="text">
               <string>15F</string>
              </property>
+            </item>
+            <item row="8" column="1">
              <property name="text">
               <string>RTV2</string>
              </property>
             </item>
-            <item>
+            <item row="9" column="0">
              <property name="text">
               <string>160</string>
              </property>
+            </item>
+            <item row="9" column="1">
              <property name="text">
               <string>RTV3</string>
              </property>
             </item>
-            <item>
+            <item row="10" column="0">
              <property name="text">
               <string>161</string>
              </property>
+            </item>
+            <item row="10" column="1">
              <property name="text">
               <string>MPRW0</string>
              </property>
             </item>
-            <item>
+            <item row="11" column="0">
              <property name="text">
               <string>162</string>
              </property>
+            </item>
+            <item row="11" column="1">
              <property name="text">
               <string>MPRW1</string>
              </property>
             </item>
-            <item>
+            <item row="12" column="0">
              <property name="text">
               <string>163</string>
              </property>
+            </item>
+            <item row="12" column="1">
              <property name="text">
-              <string>MPRV2</string>
+              <string>MPRW2</string>
              </property>
             </item>
-            <item>
+            <item row="13" column="0">
              <property name="text">
               <string>166</string>
              </property>
+            </item>
+            <item row="13" column="1">
              <property name="text">
               <string>TIME</string>
              </property>
@@ -2370,6 +2593,12 @@
         </property>
         <item row="0" column="0">
          <layout class="QGridLayout" name="gridLayout_7">
+          <property name="horizontalSpacing">
+           <number>6</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>4</number>
+          </property>
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout_5">
             <property name="sizeConstraint">
@@ -2701,7 +2930,7 @@
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>40</width>
+                  <width>37</width>
                   <height>20</height>
                  </size>
                 </property>
@@ -2744,6 +2973,9 @@
             </item>
             <item row="4" column="0">
              <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QLabel" name="label">
                 <property name="text">
