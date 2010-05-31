@@ -1,13 +1,13 @@
 #ifndef DIALOG_USB_INFO_H
 #define DIALOG_USB_INFO_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
     class DialogUsbInfo;
 }
 
-class DialogUsbInfo : public QWidget {
+class DialogUsbInfo : public QDialog {
     Q_OBJECT
 public:
     DialogUsbInfo(QWidget *parent = 0);

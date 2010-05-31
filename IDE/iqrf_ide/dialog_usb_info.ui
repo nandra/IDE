@@ -29,7 +29,7 @@
    <string>USB Device info</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/images/images/lupa.ico</normaloff>:/images/images/lupa.ico</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -160,8 +160,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

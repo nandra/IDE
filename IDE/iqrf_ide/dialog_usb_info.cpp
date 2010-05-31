@@ -2,7 +2,7 @@
 #include "ui_dialog_usb_info.h"
 
 DialogUsbInfo::DialogUsbInfo(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::DialogUsbInfo)
 {
     ui->setupUi(this);
